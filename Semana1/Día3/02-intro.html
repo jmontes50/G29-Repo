@@ -16,7 +16,7 @@
         color: orangered;
       }
     </style>
-    <!-- 3ra. utilizando un archivo .css aparte -->
+    <!-- 3ra. utilizando un archivo .css aparte, SIEMPRE VA EN EL HEAD -->
     <link rel="stylesheet" href="./02-intro.css">
   </head>
   <body>
@@ -29,9 +29,17 @@
     </header>
     <main>
       <h2>Contenido</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quo.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quo.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quo.</p>
+      <p class="importante principal">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quo.
+      </p>
+      <p class="principal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quo.</p>
+      <p class="principal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quo.</p>
+      <span>
+        Nota única
+      </span>
+      <span id="secundario">
+        Otro texto
+      </span>
     </main>
   </body>
 </html>

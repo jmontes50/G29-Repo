@@ -1,3 +1,29 @@
+/* selector universal, todos*/
+* {
+  border: 1px solid red;
+}
+
+/* selector de etiqueta */
 header {
   background-color:yellow;
+}
+
+p {
+  font-family: Courier;
+}
+
+/* selectores de clase, .nombreclase */
+.importante {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.principal {
+  background-color: lightblue;
+}
+
+/* selectores de id, #nombredelid */
+#secundario {
+  color: green;
+  font-size: 22px;
 }
