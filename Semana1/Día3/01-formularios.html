@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Formularios</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <header>
+      <h1>Formularios</h1>
+    </header>
+    <main>
+      <form>
+        <h3>Formulario de registro</h3>
+        <label for="input-nombre">Nombre completo:</label>
+        <!-- un id es un identificador único para un solo elemento -->
+        <input
+          placeholder="Ej. Juan Perez"
+          type="text"
+          id="input-nombre"
+          pattern="[a-z]{1,}"
+          required
+        >
+        <!-- <input value="el value es el valor que toma el input"/> -->
+        <br/>
+        <label for="input-email">Correo electrónico:</label>
+        <input
+          type="email"
+          placeholder="ej. user@test.com"
+          id="input-email"
+        >
+        <br/>
+        <label for="input-pass">Contraseña:</label>
+        <input
+          id="input-pass"
+          type="password"
+          placeholder="más de 6 caracteres"
+          minlength="6"
+          maxlength="14"
+          pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{6,}$"
+        >
+        <br/>
+        <label for="input-edad">Edad</label>
+        <input
+          id="input-edad"
+          type="number"
+          placeholder="Ej. 20"
+          min="18"
+          max="60"
+        >
+        <br/>
+        <h4>Género</h4>
+        <input type="radio" id="radio-m" name="genero">
+        <label for="radio-m">Másculino</label>
+        <br/>
+        <input type="radio" id="radio-f" name="genero" checked>
+        <label for="radio-f">Femenino</label>
+        <br/>
+        <input type="radio" id="radio-nd" name="genero">
+        <label for="radio-nd">No divulgar</label>
+        <br/>
+        <h4>Hobbies</h4>
+        <input type="checkbox" id="hobbie1">
+        <label id="hobbie1">Fútbol</label>
+        <br>
+        <input type="checkbox" id="hobbie2" checked>
+        <label id="hobbie2">Películas</label>
+        <br>
+        <input type="checkbox" id="hobbie3">
+        <label id="hobbie3">Series</label>
+        <br>
+        <input type="checkbox" id="hobbie4">
+        <label id="hobbie4">leer</label>
+        <h4>Ciudad</h4>
+        <select id="departamento">
+          <option disabled selected>Selecciona tu ciudad</option>
+          <!-- el value por defecto del select es el texto del option -->
+          <option value="01">Lima</option>
+          <option value="54">Arequipa</option>
+          <option value="63">Cerro de Pasco</option>
+          <option value="64">Huancayo</option>
+          <option value="84">Cusco</option>
+          <option value="44">Trujillo</option>
+          <option value="74">Chiclayo</option>
+        </select>
+        <h4>Cursos</h4>
+        <label>Selecciona el curso:</label>
+        <input list="cursos">
+        <datalist id="cursos">
+          <option value="react">React</option>
+          <option value="ng">Angular</option>
+          <option value="vue">Vue</option>
+          <option value="svelte">Svelte</option>
+        </datalist>
+        <br/>
+        <!-- <input type="submit" value="Guardar"> -->
+        <button type="submit">Guardar</button>
+      </form>
+    </main>
+  </body>
+</html>

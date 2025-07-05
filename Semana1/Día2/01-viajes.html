@@ -1,0 +1,101 @@
+<!-- Utiliza <header>, <nav>, <main>, <article>, y <footer> para estructurar la página.
+Coloca un título (<h1>), un subtítulo (<h2>) y párrafos (<p>) describiendo el lugar.
+Inserta una imagen con <img> del lugar y añade una breve descripción debajo. Encontrarás un ejemplo sin código en la siguiente diapositiva 
+Header
+Título: "Descubriendo París: La Ciudad del Amor"
+Subtítulo breve: "Guía rápida para un viaje inolvidable"
+Nav
+Enlaces: "Inicio", "Destinos", "Consejos de Viaje", "Contacto"
+Main
+Introducción: Por qué París es especial (cafés, Torre Eiffel, arte).
+Lugares para Visitar: "Torre Eiffel", "Louvre", "Notre Dame", con una línea sobre cada uno.
+Consejos de Viaje: Mejor época, idioma básico, lugares para comer.
+Footer
+Despedida: "Gracias por leer. ¡Disfruta tu visita a París!"
+Redes sociales o contacto para conectar.
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Información y configuración -->
+        <title>Guía de Arequipa</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <h1>Arequipa</h1>
+            <h2>Ciudad Blanca</h2>
+        </header>
+        <nav>
+            <!-- irían los links a otros sitios -->
+            <span>Inicio / Galería</span>
+        </nav>
+        <main>
+            <section>
+                <h2>Introducción</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cumque hic in esse expedita odio non incidunt quasi. Molestiae ullam voluptas aliquam aliquid provident, nobis aspernatur consequatur est excepturi laborum.</p>
+                <img 
+                    src="https://images.unsplash.com/photo-1727161797764-3f7f83bf3adf?q=80&w=1071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="foto panorámica de Arequipa" 
+                    width="400"
+                >
+                <!-- ./ hace referencia donde esta el archivo que estamos modificando, donde estamos ubicados -->
+                <!-- ../ hace ref a salir de la carpeta -->
+                <img src="../../images/aqp.avif" alt="foto aqp" width="300" >
+            </section>
+            <section>
+                <h2>Lugares para visitar</h2>
+                <!-- listas -->
+                <!-- lista desordenada o ul -->
+                <ul>
+                    <!-- lista -->
+                    <li>Iglesía de la compañia</li>
+                    <li>Plaza de Yanahuara</li>
+                    <li>Characato</li>
+                    <li>Molino de Sabandía</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Platos y postres típicos</h2>
+                <!-- lista ordenada OL -->
+                <ol>
+                    <li>Caldo Blanco</li>
+                    <li>Queso Helado</li>
+                    <li>Cuy Chactado</li>
+                    <li>Rocoto Relleno</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Consejos de Viaje</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quod, suscipit reiciendis aperiam eum aliquid?</p>
+                <p>Utiliza esta información/asistencia</p>
+                <ul>
+                    <li>
+                        <!-- ancla - anchor - hipervínculo - link -->
+                        <a 
+                            href="https://www.ytuqueplanes.com/destinos/arequipa"
+                            target="_blank"
+                        >
+                            Y tu que planes? - Arequipa
+                        </a>
+                    </li>
+                    <!-- href me permite indicar a que dirección quiero que me lleve el link/hipervínculo  -->
+                     <!-- target, donde queremos que cargue ese nuevo link, en una pestaña nueva, en la misma pestaña. -->
+                    <li>
+                        <a href="https://www.tripadvisor.com.pe/Tourism-g294313-Arequipa_Arequipa_Region-Vacations.html">
+                            Trip Advisor - Arequipa
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.arequipaperu.org/telefonos-de-emergencia">
+                            Teléfonos de Emergencia - Arequipa
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <h4>Gracias por llegar hasta aquí</h4>
+            <address>Av. Dolores ### - Arequipa</address>
+        </footer>
+    </body>
+</html>
