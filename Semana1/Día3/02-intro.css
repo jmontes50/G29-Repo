@@ -1,6 +1,9 @@
 /* selector universal, todos*/
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  border-width: 1px;
+  border-color: red;
+  border-style: solid;
 }
 
 /* selector de etiqueta */
@@ -26,4 +29,15 @@ p {
 #secundario {
   color: green;
   font-size: 22px;
+}
+
+span {
+  font-family: Arial;
+  color:purple;
+}
+
+#subtitulo {
+  /* usar !important tampoco se considera buena práctica */
+  color:peru !important;
+  font-family: Arial;
 }
