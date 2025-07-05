@@ -41,3 +41,14 @@ span {
   color:peru !important;
   font-family: Arial;
 }
+
+/* Operadores */
+/* padre espacio hijos, afecta a todos los elementos hijos de cierto tipo */
+ul li {
+  color:crimson;
+}
+/* va a afectar a todos los li que sean hijos inmediatos de un ul, los hijos inmediatos son los que no tengan un elemento de por medio  */
+ul > li {
+  font-weight: bold;
+  color: steelblue;
+}
