@@ -41,4 +41,26 @@ tr:hover {
  /* even es par */
  tr:nth-of-type(even){
   background-color:gold
- }
+}
+
+/* usar un filtro de atributo */
+input {
+  border:2px solid green;
+}
+
+/* los input que tengan un type igual a number
+el input[name=genero]
+*/
+input[type=number]{
+  background:aqua;
+}
+
+/* todo lo visto aplica con selectores de etiqueta, clases, id */
+.input-data[placeholder="ingrese nombre"]{
+  background:yellow;
+}
+/* pseudoclase para  inputs  radio o checkbox, si estan marcados */
+input[type=checkbox]:checked {
+  width: 30px; /*ancho*/
+  height: 30px; /*altura*/
+}
