@@ -1,0 +1,44 @@
+/* un Y, la , representa un Y*/
+/* los span Y los h2 */
+span, h2 {
+  border: 2px solid blue;
+}
+
+/* en este caso afecta a los elementos hermanos inmediatos después del primer elemento */
+/* los <p> hermanos después de span */
+span ~ p {
+  color:slateblue;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+/* las tablas tiene varios elementos */
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border:2px solid black;
+}
+
+/* pseudoclases */
+/* selector:pseudoclase */
+tr:hover {
+  background-color:darkgreen;
+  color:white;
+  cursor: pointer;
+}
+/* De los tr el elemento n3 */
+/* tr:nth-of-type(3){
+  color: violet;
+} */
+
+/* odd es impar */
+ tr:nth-of-type(odd){
+  background-color: chocolate;
+ }
+
+ /* even es par */
+ tr:nth-of-type(even){
+  background-color:gold
+ }
