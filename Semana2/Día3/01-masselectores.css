@@ -22,12 +22,7 @@ td {
 }
 
 /* pseudoclases */
-/* selector:pseudoclase */
-tr:hover {
-  background-color:darkgreen;
-  color:white;
-  cursor: pointer;
-}
+
 /* De los tr el elemento n3 */
 /* tr:nth-of-type(3){
   color: violet;
@@ -41,6 +36,13 @@ tr:hover {
  /* even es par */
  tr:nth-of-type(even){
   background-color:gold
+}
+
+/* selector:pseudoclase */
+tr:hover {
+  background-color:darkgreen;
+  color:white;
+  cursor: pointer;
 }
 
 /* usar un filtro de atributo */
