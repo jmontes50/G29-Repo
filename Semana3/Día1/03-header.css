@@ -55,3 +55,8 @@
   background-color: black;
   color: white;
 }
+
+.header-btns {
+  width: 180px;
+  margin:0 auto;
+}
