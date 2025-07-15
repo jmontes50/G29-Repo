@@ -1,0 +1,26 @@
+* {
+  /* reset-css */
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* temporal */
+  border:2px solid red;
+}
+
+.badge{
+  background-color: lightgray;
+  /* align-text, para alinear texto */
+  text-align: center;
+  width:100px;
+  /* espaciado entre el borde y el contenido */
+  padding: 4px;
+  /* redondea las esquinas de un elemento (borde) */
+  border-radius: 20px;
+  /* margin o padding, podemos colocar 1 2 y 4 valores */
+  /*con 2 valores: arribaYAbajo costados */
+  /* margin: 50px 300px; */
+  /* con 4 valores: arr der aba izq 🕑 */
+  /* margin: 50px 100px 150px 200px; */
+  /* auto es indicarle al navegador que se encargue de la medida, se puede usar para centrar de forma horizontal */
+  margin: 10px auto;
+}
