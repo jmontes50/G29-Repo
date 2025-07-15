@@ -7,6 +7,18 @@
   border:2px solid red;
 }
 
+/* selectores de etiquetas */
+/* estilos generales */
+
+header {
+  /* con max-width, si el ancho es menor se ajustará a esa medida, pero no sobrepasara esa medida */
+  max-width: 1200px;
+  margin:0 auto;
+  padding:96px;
+}
+
+/* clases */
+
 .badge{
   background-color: lightgray;
   /* align-text, para alinear texto */
@@ -23,6 +35,7 @@
   /* margin: 50px 100px 150px 200px; */
   /* auto es indicarle al navegador que se encargue de la medida, se puede usar para centrar de forma horizontal */
   margin: 10px auto;
+  margin-bottom: 20px;
 }
 
 .header-title {
@@ -32,12 +45,14 @@
   font-weight: 300;
   text-align:center;
   padding:20px;
+  margin-bottom:40px;
 }
 
 .text-header {
   font-family: Arial, Helvetica, sans-serif;
   color: gray;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .btn {
@@ -59,4 +74,10 @@
 .header-btns {
   width: 180px;
   margin:0 auto;
+  margin-bottom: 40px;
+}
+
+.header-img {
+  /*las unidades % tienen de referencia al elemento padre */
+  width: 100%;
 }
