@@ -27,3 +27,27 @@ span {
   background-color:aqua;
   width: 1000px;
 }
+
+/* elementos como input, button, label, tiene un display llamado inline-block */
+button {
+  width: 200px;
+  height: 60px;
+}
+
+input {
+  display: inline-block;
+  width:100px;
+  height: 50px;
+  /* margin: 20px; */
+}
+
+aside{
+  border: 2px solid blue;
+  width:404px;
+}
+
+/* inline-block trae unos espacios por defecto que no se pueden remover */
+.publicidad {
+  width:200px;
+  display:inline-block;
+}
