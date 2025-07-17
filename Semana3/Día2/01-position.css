@@ -27,9 +27,15 @@ div {
   position: absolute;
   top: 50px;
   left: 70px;
+  /* Buena práctica, dejar intervalos entre z-index en caso de tener que agregar elementos en el medio */
+  z-index: 1;
 }
 .caja3 {
   background-color: yellow;
+  position: relative;
+  /* mientras más alto el valor de z-index, más por encima estará */
+  /* z-index tiene que tener algún tipo de position fuera del static */
+  z-index: 10;
 }
 .caja4 {
   background-color: skyblue;
