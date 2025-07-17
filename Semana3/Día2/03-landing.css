@@ -69,3 +69,17 @@ h1, h2, h3, h4, h5, h6 {
 .btn-sm {
   padding: 8px 15px;
 }
+
+/* header */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+.slogan {
+  font-size: 72px;
+  font-weight: 300;
+}
