@@ -30,3 +30,16 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Fraunces", serif;
 }
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
