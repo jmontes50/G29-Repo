@@ -6,6 +6,7 @@
 
 .padre {
   height: 500px;
+  /* % toma en cuenta el tamaño del elemento padre inmediato */
   width: 100%; /*el elemento en este caso es el body*/
   border:3px solid blue;
   display: flex;
@@ -15,7 +16,16 @@
   /* space-around, alrededor de elementos */
   /* space-evenly, espacio parejo entre y al costado */
   justify-content: center;
-
+  /* align-items, alinea verticalmente */
+  /* flex-start los pone al inicio */
+  /* center, centra */
+  /* flex-end los pone al final */
+  align-items: center;
+  /* gap, brecha */
+  gap: 20px;
+  /* flex-direction, que indica la dirección del flex */
+  /* propieddes como justify-content y align-items cambian */
+  flex-direction: column;
 }
 
 .caja{
