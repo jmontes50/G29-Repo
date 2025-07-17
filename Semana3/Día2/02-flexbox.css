@@ -25,7 +25,13 @@
   gap: 20px;
   /* flex-direction, que indica la dirección del flex */
   /* propieddes como justify-content y align-items cambian */
-  flex-direction: column;
+  flex-direction: row;
+  /* wrap, no modifica el tamaño de los elementos hijos, si no hace que "colapsen" a la parte inferior */
+  /* nowrap, si es que falta espacio cambia el tamaño de los elementos hijos */
+  flex-wrap: nowrap;
+  /* align-content funciona cuando flex-wrap: wrap, y cambia como sea agrupan los elementos cuando colapsan */
+  /* center, space-between, space-evenly */
+  /* align-content:center; */
 }
 
 .caja{
@@ -33,4 +39,24 @@
   height: 100px;
   border:3px solid red;
   background-color: coral;
+}
+
+/* necesitan nowrap */
+/* flex-shrink y flex-grow */
+/* grow hace crecer a los elementos en la proporción dada tomando de referencia el espacio sobrante */
+/* shrink reduce a los elementos en la proporción dada tomando de ref. el espacio faltante si se reduce el contenedor padre */
+.caja:nth-of-type(1){
+  flex-grow: 4;
+}
+
+.caja:nth-of-type(2){
+  flex-grow: 1;
+}
+
+.caja:nth-of-type(3){
+  flex-shrink: 4;
+}
+
+.caja:nth-of-type(4){
+  flex-shrink: 2;
 }
