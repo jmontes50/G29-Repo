@@ -36,10 +36,36 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 42px 88px;
 }
 
 .links {
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.logo {
+  font-size:30px;
+  font-weight: 900;
+}
+
+.btn {
+  padding: 15px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn-white {
+  border:2px solid black;
+}
+
+.btn-black {
+  border:2px solid black;
+  color: white;
+  background-color: black;
+}
+
+.btn-sm {
+  padding: 8px 15px;
 }
