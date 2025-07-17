@@ -1,0 +1,18 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.padre {
+  height: 500px;
+  width: 100%; /*el elemento en este caso es el body*/
+  border:3px solid blue;
+}
+
+.caja{
+  width: 100px;
+  height: 100px;
+  border:3px solid red;
+  background-color: coral;
+}
