@@ -8,6 +8,14 @@
   height: 500px;
   width: 100%; /*el elemento en este caso es el body*/
   border:3px solid blue;
+  display: flex;
+  /* justify-content me permite alinear horizontalmente */
+  /* center, centra a los elementos */
+  /* space-between, entre elementos */
+  /* space-around, alrededor de elementos */
+  /* space-evenly, espacio parejo entre y al costado */
+  justify-content: center;
+
 }
 
 .caja{
