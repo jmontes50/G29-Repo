@@ -4,7 +4,7 @@
   padding:0;
   box-sizing: border-box;
   /* temporal */
-  border:2px solid red;
+  /* border:2px solid red; */
 }
 
 /* selectores de etiquetas */
@@ -80,4 +80,13 @@ header {
 .header-img {
   /*las unidades % tienen de referencia al elemento padre */
   width: 100%;
+}
+
+main {
+  max-width: 1200px;
+  margin:0 auto;
+}
+
+li {
+  margin-bottom: 10px;
 }
