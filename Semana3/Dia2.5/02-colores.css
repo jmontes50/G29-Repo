@@ -36,3 +36,15 @@ body {
   background: radial-gradient(circle, blue, steelblue, aqua);
   height: 400px;
 }
+
+.caja3{
+  height: 400px;
+  border: 2px solid red;
+  /* No usen imagenes de fondo */
+  background-image: url("https://images.unsplash.com/photo-1526697675318-89790adec369?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size:cover;
+  background-position: center;
+  /* transparencia */
+  opacity: 0.5;
+  filter:grayscale(0.5);
+}
