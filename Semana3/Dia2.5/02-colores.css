@@ -20,3 +20,19 @@ body {
   /* Alpha, va de 0 a 1 */
   color: rgba(120, 20, 240, 0.3);
 }
+
+.titulo4 {
+  /* hsl(color, saturacion, brillo)  */
+  /* hsl(numeros, porcentaje, porcentaje) */
+  color: hsl(240, 50%, 50%);
+}
+
+.caja1 {
+  /* linear-gradient(direccion, ...colores); */
+  background: linear-gradient(to right, red, orange, yellow);
+}
+
+.caja2 {
+  background: radial-gradient(circle, blue, steelblue, aqua);
+  height: 400px;
+}
