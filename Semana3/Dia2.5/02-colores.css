@@ -1,0 +1,22 @@
+body {
+  background-color:wheat;
+}
+
+.titulo1 {
+  /* hexadecimal 0 - 9 ABCDEF -> 0F 9F 5A FF */
+  /* 3 pares, #RRGGBB */
+  color: #2398f2;
+}
+
+.titulo2 {
+  /* 4 pares, #RRGGBBAA */
+  /* Alpha, transparencia */
+  color: #45df6433;
+}
+
+.titulo3 {
+  /* 0 a 255 en 3 pares + 1 alpha */
+  /* rgba(rojo, verde, azul, alpha) */
+  /* Alpha, va de 0 a 1 */
+  color: rgba(120, 20, 240, 0.3);
+}
