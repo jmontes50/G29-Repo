@@ -3,7 +3,7 @@
   padding:0;
   box-sizing: border-box;
   /* temp */
-  /* border: 2px solid red; */
+  border: 2px solid red;
 }
 
 /* estilos generales */
@@ -93,3 +93,25 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 20px;
 }
 
+/* section questions */
+
+.questions {
+  height: 500px;
+  display: flex;
+}
+
+.question-orange {
+  border-top:4px solid orangered;
+}
+
+.question-orange .fa-message {
+  color: orangered;
+  margin: 20px 0 30px 0;
+}
+
+.question-title {
+  /* tamaño de la letra */
+  font-size: 54px;
+  /* grosor de la letra */
+  font-weight: 300;
+}
