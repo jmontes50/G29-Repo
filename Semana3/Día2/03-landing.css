@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 .header {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
   text-align: center;
   align-items: center;
 }
@@ -82,4 +82,13 @@ h1, h2, h3, h4, h5, h6 {
 .slogan {
   font-size: 72px;
   font-weight: 300;
+}
+
+.header-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.header-img {
+  margin-top: 20px;
 }
