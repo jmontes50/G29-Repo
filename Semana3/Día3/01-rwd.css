@@ -11,10 +11,25 @@ header {
   color: blue;
 }
 
+main {
+  font-size: 20px;
+}
+
 p {
   font-family: Helvetica, sans-serif;
-  font-size: 14px;
-  padding: 32px;
+  /* el elemento más cercano */
+  font-size: 0.75em; /*15px*/
+  /* padding: 32px; */
+  padding: 0.5em;
+  /* %usa como referencia al ancho del elemento padre */
+  width: 50%;
+}
+
+span {
+  color:forestgreen;
+  /* rem es tomar el valor más lejano, el del html que es 16px */
+  font-size: 0.75rem;
+  font-family: Helvetica, sans-serif;
 }
 
 /*
