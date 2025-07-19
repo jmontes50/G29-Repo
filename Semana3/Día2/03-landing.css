@@ -196,3 +196,36 @@ h1, h2, h3, h4, h5, h6 {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+/* @media screen and (width <= 768px) { */
+@media (width <= 768px) {
+  .container {
+    padding:16px;
+  }
+
+  .header {
+    gap:24px;
+  }
+
+  .slogan {
+    font-size:56px;
+  }
+
+  .header-img {
+    width:100%;
+  }
+
+  /* questions */
+  .questions {
+    flex-direction: column;
+    /* fit-content para ajustar al contenido */
+    height: fit-content;
+    gap:30px;
+  }
+
+  .question-title {
+    font-size: 32px;
+  }
+
+
+}
