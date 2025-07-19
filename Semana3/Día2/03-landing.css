@@ -98,6 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 .questions {
   height: 500px;
   display: flex;
+  padding: 64px 0;
 }
 
 .question-orange {
@@ -115,3 +116,15 @@ h1, h2, h3, h4, h5, h6 {
   /* grosor de la letra */
   font-weight: 300;
 }
+
+.question-blue {
+  border-top: 4px solid steelblue;
+  /* alinea un elemento que este dentro de un elemento padre con flex para alinearse verticalmente el solo */
+  align-self: flex-end;
+}
+
+.question-blue .fa-message {
+  color: steelblue;
+  margin: 20px 0 30px 0;
+}
+
