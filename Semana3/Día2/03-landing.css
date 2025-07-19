@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 /* section join */
 .bg-gold {
   width:100%;
-  background-color: rgb(223, 175, 56);
+  background-color: #FED501;
 }
 
 .join {
@@ -151,3 +151,38 @@ h1, h2, h3, h4, h5, h6 {
 .join-text{
   font-weight: 300;
 }
+
+/* section data */
+.data {
+  padding:64px 36px;
+}
+
+.data-title {
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.data-table {
+  width: 100%;
+  /* para que los td se unan usamos esta propiedad */
+  border-collapse: collapse;
+}
+
+/*
+.data-table tr {
+  background-color: gold;
+  no se aplica para tr el border-radius
+  border-radius: 20px;
+}
+*/
+
+.data-table td {
+  /* border:2px solid black; */
+  padding: 16px;
+}
+
+.data-table tr:nth-of-type(odd) td{
+  background-color: #FED501;
+}
+
