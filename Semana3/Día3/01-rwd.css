@@ -32,6 +32,19 @@ span {
   font-family: Helvetica, sans-serif;
 }
 
+body {
+  border:3px solid blue;
+  width: 500px;
+}
+
+div {
+  border:3px solid red;
+  /* width: 50%; */
+  /* vw vh, toman en cuenta el tamaño del navegador */
+  width: 50vw;
+  height: 100vh;
+}
+
 /*
   @media <medio-dispositivo> and <breakpoint-condicional> {
     selector {
