@@ -16,3 +16,31 @@ p {
   font-size: 14px;
   padding: 32px;
 }
+
+/*
+  @media <medio-dispositivo> and <breakpoint-condicional> {
+    selector {
+      agregar o reemplazar propiedades
+    }
+  }
+*/
+/* mayor */
+@media (width <= 768px) {
+  header {
+    color:darkviolet;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+/* a menor */
+@media screen and (width <= 440px) {
+  header {
+    color: red;
+    font-size: 36px;
+    background-color:gold;
+
+  }
+}
