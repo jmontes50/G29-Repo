@@ -227,5 +227,21 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 32px;
   }
 
+  .join {
+    padding: 40px 0;
+  }
 
+  .join-title {
+    font-size: 32px;
+  }
+
+  /* tablas NO distorcionarlas */
+  .data {
+    /* en el eje x y scroll para la barra de desplazamiento */
+    overflow-x: scroll;
+  }
+
+  .data-table {
+    width: 700px;
+  }
 }
