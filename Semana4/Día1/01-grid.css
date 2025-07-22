@@ -1,0 +1,23 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.padre {
+  background-color: aquamarine;
+  height: 100vh;
+  /* grid */
+  display: grid;
+  /* con grid el obj. es formar una grilla */
+  /* grid-template-columns: 250px 250px 250px; */
+  /* grid-template-columns: repeat(4, 200px); */
+  /* 1fr free-space */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+}
+
+.item {
+  background-color:lightcoral;
+  border: 2px solid red;
+}
