@@ -10,6 +10,21 @@
   height: 200px;
   border-radius: 20px;
   margin:10px;
+  /* transiciones */
+  /* duración */
+  transition-duration: 1s;
+  /* retardo para iniciar la transición */
+  transition-delay: 500ms;
+  /* transition-property: background-color; */
+  transition-property: all;
+}
+
+.poligono:hover {
+  background-color: coral;
+  height:300px;
+  width:300px;
+  border-radius: 50%;
+  transform: rotate(180deg);
 }
 
 .caja {
@@ -17,4 +32,7 @@
   height: 200px;
   border: 2px solid blue;
   background-color:cornflowerblue;
+  /* las transformaciones suceden en un paso aparte, después del resto de propiedades de css  */
+  transform: translate(100px, 200px) scale(1.5) rotate(45deg) skew(20deg);
 }
+
