@@ -16,9 +16,13 @@
   /* grid-template-columns: 1fr 1fr 1fr; */
   /* repeat me permite indicar cuantas columnas y de que tamaño */
   /* minmax, me permite indicar con el tamaño mínimo y máximo de cada columna */
+  /* GRID EXPLÍCITO */
   grid-template-columns: repeat(3, minmax(150px, 1fr));
   grid-template-rows: repeat(3, 200px);
-
+  /* GRID IMPLÍCITO */
+  grid-auto-columns: 350px;
+  grid-auto-rows: 250px;
+  grid-auto-flow: row;
   gap: 20px;
 }
 
