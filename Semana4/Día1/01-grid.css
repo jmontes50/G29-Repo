@@ -14,10 +14,21 @@
   /* grid-template-columns: repeat(4, 200px); */
   /* 1fr free-space */
   /* grid-template-columns: 1fr 1fr 1fr; */
+  /* repeat me permite indicar cuantas columnas y de que tamaño */
+  /* minmax, me permite indicar con el tamaño mínimo y máximo de cada columna */
   grid-template-columns: repeat(3, minmax(150px, 1fr));
+  grid-template-rows: repeat(3, 200px);
+
+  gap: 20px;
 }
 
 .item {
   background-color:lightcoral;
   border: 2px solid red;
+}
+
+.item1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  background-color: lightblue;
 }
