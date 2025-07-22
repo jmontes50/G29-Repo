@@ -197,8 +197,41 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-right-radius: 10px;
 }
 
+.open-menu, .close-menu {
+  display: none;
+}
+
+#checkbox-menu {
+  /* esconde un elemento pero si esta siendo renderizado */
+  visibility: hidden;
+}
+
 /* @media screen and (width <= 768px) { */
 @media (width <= 768px) {
+
+  .open-menu, .close-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .close-menu {
+    align-self: self-end;
+  }
+
+  .links {
+    background-color: #FED501;
+    flex-direction: column;
+    gap: 40px;
+    font-size:20px;
+    position: fixed;
+    top:0;
+    right:0px;
+
+    width: 100vw;
+    height: 100vh;
+    padding:30px;
+  }
+
   .container {
     padding:16px;
   }
