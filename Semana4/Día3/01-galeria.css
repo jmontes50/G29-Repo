@@ -33,6 +33,20 @@
   object-fit: cover;
 }
 
+.frame {
+  position: relative;
+}
+/* el espacio " " es un operador que indica todos los elementos de.. en este caso todos los span que esten dentro de .frame */
+.frame span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
 .frame1 {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
