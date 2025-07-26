@@ -35,7 +35,19 @@
 
 .frame {
   position: relative;
+  /* filter, nos permite aplicar filtros visuales como ccambios de color, difuminación */
+  /* grayscale(valor porcentual) y pone el elemento en escala de grises */
+  filter: grayscale(100%);
 }
+
+.frame:hover {
+  /* X Y Crecia color */
+  box-shadow: 0 0 10px black;
+  filter: grayscale(0);
+  transform: translate(0, 5px) scale(1.03) rotate(0.5deg);
+}
+
+
 /* el espacio " " es un operador que indica todos los elementos de.. en este caso todos los span que esten dentro de .frame */
 .frame span {
   position: absolute;
