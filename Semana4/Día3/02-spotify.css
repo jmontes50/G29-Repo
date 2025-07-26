@@ -60,7 +60,7 @@ body {
   border-radius: 10px;
   height: 220px;
   position: relative;
-
+  overflow: hidden;
 }
 
 .box-title {
@@ -70,7 +70,44 @@ body {
 .explore-box img {
   width: 180px;
   position: absolute;
-  top: 55px;
+  top: 60px;
   right: -30px;
   transform: rotate(20deg);
+}
+
+.explore-box:nth-of-type(1){
+  background-color: var(--genre-color01);
+}
+.explore-box:nth-of-type(2){
+  background-color: var(--genre-color02);
+}
+.explore-box:nth-of-type(3){
+  background-color: var(--genre-color03);
+}
+.explore-box:nth-of-type(4){
+  background-color: var(--genre-color04);
+}
+.explore-box:nth-of-type(5){
+  background-color: var(--genre-color05);
+}
+.explore-box:nth-of-type(6){
+  background-color: var(--genre-color06);
+}
+.explore-box:nth-of-type(7){
+  background-color: var(--genre-color07);
+}
+.explore-box:nth-of-type(8){
+  background-color: var(--genre-color08);
+}
+.explore-box:nth-of-type(9){
+  background-color: var(--genre-color09);
+}
+.explore-box:nth-of-type(10){
+  background-color: var(--genre-color10);
+}
+.explore-box:nth-of-type(11){
+  background-color: var(--genre-color11);
+}
+.explore-box:nth-of-type(12){
+  background-color: var(--genre-color12);
 }
