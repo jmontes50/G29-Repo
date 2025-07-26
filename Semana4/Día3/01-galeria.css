@@ -3,7 +3,7 @@
   padding:0;
   box-sizing: border-box;
   /* temporal */
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .container {
@@ -38,6 +38,8 @@
   /* filter, nos permite aplicar filtros visuales como ccambios de color, difuminación */
   /* grayscale(valor porcentual) y pone el elemento en escala de grises */
   filter: grayscale(100%);
+  /* transición */
+  transition-duration: 300ms;
 }
 
 .frame:hover {
@@ -45,6 +47,7 @@
   box-shadow: 0 0 10px black;
   filter: grayscale(0);
   transform: translate(0, 5px) scale(1.03) rotate(0.5deg);
+
 }
 
 
@@ -88,4 +91,20 @@
 
 .frame8 {
   grid-column: 3 / 5;
+}
+
+/* keyframes */
+@keyframes entrada {
+  0% {
+    /* no se va a ver la imagen, esta a una escala de 0 */
+    transform: scale(0);
+  }
+  70% {
+    /* aparecerá pero un poquito más grande que su tamaño original */
+    transform: scale(1.05);
+  }
+  100% {
+    /* lo dejemos con su tamaño original */
+    transform: scale(1);
+  }
 }
