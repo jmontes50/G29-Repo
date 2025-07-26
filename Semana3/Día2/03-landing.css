@@ -231,6 +231,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 100vw;
     height: 100vh;
     padding:30px;
+
+    transition-property: all;
+    /* usualmente para transiciones se recomienda que no exceda los 300 ms */
+    transition-duration: 200ms;
   }
 
   #checkbox-menu:checked ~ .links {
