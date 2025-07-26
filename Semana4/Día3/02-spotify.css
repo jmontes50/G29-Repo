@@ -37,6 +37,7 @@ body {
 
 .explore-title {
   font-size: var(--size-title);
+  margin-bottom:32px;
 }
 
 .explore {
@@ -44,4 +45,23 @@ body {
   margin:20px;
   padding:24px 16px;
   border-radius: 20px;
+}
+
+.explore-albums {
+  display:grid;
+  gap: 20px;
+  /* auto-fit va a utilizar el tamaño mínimo o estático, que tenga los elementos hijos a los cuales se les esta el aplicando el grid, para que puedan colpasar */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.explore-box {
+  background-color: gray;
+  padding:20px;
+  border-radius: 10px;
+  height: 220px;
+
+}
+
+.box-title {
+  font-size:24px;
 }
