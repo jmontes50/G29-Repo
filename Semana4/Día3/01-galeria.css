@@ -1,0 +1,22 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* temporal */
+  border: 2px solid red;
+}
+
+.container {
+  max-width: 1200px;
+  /* el min-width hace que un elemento solo sea posible reducirlo hasta el tamaño indicado  */
+  min-width: 800px;
+  /* es hasta donde puede reducirse su altura */
+  min-height: 1000px;
+  margin:0 auto;
+  padding:40px;
+}
+
+.frame-img {
+  /* temporal */
+ max-width: 500px;
+}
