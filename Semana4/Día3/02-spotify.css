@@ -56,12 +56,21 @@ body {
 
 .explore-box {
   background-color: gray;
-  padding:20px;
+  padding: 20px;
   border-radius: 10px;
   height: 220px;
+  position: relative;
 
 }
 
 .box-title {
-  font-size:24px;
+  font-size: 24px;
+}
+
+.explore-box img {
+  width: 180px;
+  position: absolute;
+  top: 55px;
+  right: -30px;
+  transform: rotate(20deg);
 }
