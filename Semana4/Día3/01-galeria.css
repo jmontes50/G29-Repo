@@ -12,11 +12,23 @@
   min-width: 800px;
   /* es hasta donde puede reducirse su altura */
   min-height: 1000px;
+  /* es hasta donde puede crecer su altura */
+  max-height: 1200px;
   margin:0 auto;
   padding:40px;
+  /* grid */
+  display: grid;
+  gap:20px;
+  /* grid-explícito, una grilla de 4x4 */
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  grid-template-rows: repeat(4, minmax(150px, 1fr));
 }
 
 .frame-img {
   /* temporal */
- max-width: 500px;
+  /* max-width: 500px; */
+  width: 100%;
+  height: 100%;
+  /* No siempre una imagen va a tener la misma proporción de tamaño que su contenedor padre, podemos usar object fit cover para solucionarlo a costa de la proporcion de la imagen, es necesario 100% par ancho y alto */
+  object-fit: cover;
 }
