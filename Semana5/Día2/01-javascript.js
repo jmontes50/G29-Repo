@@ -83,3 +83,13 @@ let d = 40;
 // d = d - 5; // d = 35
 d -= 5;
 console.log("Nuevo valor de d:", d);
+
+let e = 50;
+// e = e * 2; // e = 100
+e *= 2;
+console.log("Nuevo valor de e:", e);
+
+let f = 60;
+// f = f / 3; // f = 20
+f /= 3;
+console.log("Nuevo valor de f:", f);
