@@ -32,3 +32,17 @@ console.log("tipo de dato", typeof noDefinido); //undefined
 let nulo = null; //para que eventualmente se asigne un valor
 console.log("valor:", nulo);
 console.log("tipo de dato", typeof nulo); //object
+
+//Expresión vs Sentencia
+//Expresión es algo que se evalúa y devuelve un valor
+//Sentencia es una instrucción que se ejecuta
+console.log("Hola"); //Sentencia
+let saludo = "Buenas tardes"; //Sentencia
+console.log(100 + 5); //expresión, la parte del 100 + 5 se evalúa y devuelve un valor
+
+//Operaciones aritméticas
+console.log("Suma:", 10 + 5); // Suma
+console.log("Resta:", 10 - 5); // Resta
+console.log("Multiplicación", 10 * 5); // Multiplicación
+console.log("División", 10 / 5); // División
+console.log("Módulo", 10 % 3); // Módulo (residuo de la división)
