@@ -62,3 +62,24 @@ console.log(`
   ¿cómo estás?, Aquí tengo los ${10 + 20}
   que te debía.
 `); // Usando template literals
+
+//operadores aritméticos
+let a = 10;
+// a = a + 5; // a = 15
+a += 5;
+console.log("Nuevo valor de a:", a);
+
+let b = 20;
+// b = b + 1;
+b++;
+console.log("Nuevo valor de b:", b);
+
+let c = 30;
+// c = c - 1; // c = 29
+c--;
+console.log("Nuevo valor de c:", c);
+
+let d = 40;
+// d = d - 5; // d = 35
+d -= 5;
+console.log("Nuevo valor de d:", d);
