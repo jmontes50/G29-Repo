@@ -14,16 +14,14 @@ if (nota > 12) {
 //preguntar y recibir una respuesta del usuario, cuando obtenemos un dato del usuario, este es un string
 let promptEdad = prompt("Ingrese su edad");
 console.log("Tipo dato promptEdad:", typeof promptEdad);
-//convertir el string a un número con Number
+//convertir el string a un número con Number, parseInt o parseFloat
 let edadNumber = Number(promptEdad);
 console.log("Edad ingresada:", edadNumber);
 console.log("Tipo dato edadNumber:", typeof edadNumber);
 console.log("es NaN???????:", isNaN(edadNumber));
 if (isNaN(edadNumber)) {
   console.log("Por favor ingrese un número válido");
-}
-
-if (edadNumber >= 60) {
+} else if (edadNumber >= 60) {
   console.log("Usted es un adulto mayor tiene dscto.");
 } else {
   console.log("Puede acceder a otras promociones");
