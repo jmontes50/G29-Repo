@@ -21,6 +21,7 @@ console.log("Tipo dato edadNumber:", typeof edadNumber);
 console.log("es NaN???????:", isNaN(edadNumber));
 if (isNaN(edadNumber)) {
   console.log("Por favor ingrese un número válido");
+  //podemos agregar else if para evaluar más condiciones
 } else if (edadNumber >= 60) {
   console.log("Usted es un adulto mayor tiene dscto.");
 } else {
