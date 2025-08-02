@@ -37,6 +37,7 @@ if(isNaN(total)){
 
 
 //versión evaluando si es positivo
+//debugger puede ser aplicado en Chrome en Sources y en Firefox en debugger
 debugger;
 let esNumero = !isNaN(total);
 debugger;
