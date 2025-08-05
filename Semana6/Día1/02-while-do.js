@@ -32,8 +32,8 @@ do {
 let tienePermisos = false;
 
 do {
-  console.log(`Evaluando al incio tienePermisos: ${tienePermisos}`);
-  tienePermisos = confirm("El usuario tiene permisos?")
+  console.log(`Evaluando al inicio tienePermisos: ${tienePermisos}`);
+  tienePermisos = confirm("El usuario tiene permisos?");
   console.log(`Observando el valor de tienePermisos: ${tienePermisos}`);
 } while (tienePermisos === true);
 
