@@ -34,6 +34,7 @@ switch (mesNumber) {
 }
 */
 
+/*
 switch (true) {
   case 1 <= mesNumber && 3 >= mesNumber:
     console.log("Verano");
@@ -45,10 +46,23 @@ switch (true) {
     console.log("Invierno");
     break;
   case 10 <= mesNumber && 12 >= mesNumber:
-    console.log("Otoño");
+    console.log("Primavera");
     break;
   default:
     console.log("El valor no es válido");
 }
+*/
 
 // console.log(typeof (1 < mesNumber))
+
+let edad = Number(prompt("Ingrese edad"));
+//confirm me pregunta por un valor booleano V / F
+let estaSuscrito = confirm("Esta suscrito");
+
+console.log("EDAD", edad);
+console.log("SUSCRITO", estaSuscrito);
+
+// operación OR - ó ||
+if(edad >= 25 || estaSuscrito) {
+  console.log("Tiene descuento");
+}
