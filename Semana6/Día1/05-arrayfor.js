@@ -14,7 +14,7 @@ for (let i = 0; i < frutas.length; i++){
 //string como arreglo
 let palabra = "hipopotamo";
 
-console.log("Letra:", palabra[4]);
+console.log("Letra:", palabra[4]); //demostrativa para recordar que podemos acceder a un item, en este caso a una letra
 
 let cantidadLetraO = 0;
 
