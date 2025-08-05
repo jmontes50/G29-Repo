@@ -14,6 +14,7 @@ for(let apps = 0; apps <= 10; apps+= 2){
 console.log("Ya no tiene espacio");
 */
 
+/*
 let limite = Number(prompt("Hasta que número deseas sumar?"));
 
 let suma = 0;
@@ -27,3 +28,9 @@ for(let i = 0; i <= limite; i++) {
 }
 
 console.log(`La suma del 1 al ${limite} es ${suma}`);
+*/
+
+//i-- => i = i - 1;
+for(let i = 0; i > -10; i--){
+  console.log(`El valor de i es: ${i}`)
+}
