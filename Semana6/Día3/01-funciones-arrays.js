@@ -16,7 +16,7 @@ console.log("UNSHIFT:", ingredientes);
 console.log(ingredientes[0]);
 
 //Remueve/elimina el último item de un array
-ingredientes.pop()
+ingredientes.pop();
 console.log("POP:", ingredientes);
 
 //remuve/elimina el primer item de un array
