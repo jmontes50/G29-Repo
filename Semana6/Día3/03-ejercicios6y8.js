@@ -13,6 +13,7 @@ function contarPares (arrayNumeros) {
       // console.log(`${arrayNumeros[i]} es par!`);
       // cantidadPares = cantidadPares + 1; // es lo mismo que:
       cantidadPares++;
+      // debugger;
       // console.log(cantidadPares)
     }
   }
@@ -41,3 +42,5 @@ function contarPares2do (arrayNumeros) {
 
 let resultadoContarPares2do = contarPares2do([10, 25, 30, 45, 50]);
 console.log(resultadoContarPares2do)
+
+//El 8 esta en el siguiente archivo
