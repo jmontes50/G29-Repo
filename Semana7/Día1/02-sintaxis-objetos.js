@@ -17,8 +17,9 @@ let serie = {
       usuario: "mhStella",
       valoracion: 10,
       etiquetas: ["Emocionante", "Dramático", "Nostálgico"]
-    }
-  ]
+    },
+  ],
+  trailers: []
 };
 //a una propiedad con . o con ["propiedad"] ej: gato.color
 //a un item de un array con [#] ej: arr[0]
