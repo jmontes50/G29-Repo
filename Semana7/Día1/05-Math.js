@@ -19,3 +19,10 @@ console.log("floor, redonde al núm inferior", Math.floor(nota));
 let aleatorio = Math.random(); //num aleatorio entre 0 y 1
 
 console.log("Aleatorio", aleatorio);
+
+//Caso práctico
+let color1 = Math.floor(Math.random() * 256);
+let color2 = Math.floor(Math.random() * 256);
+let color3 = Math.floor(Math.random() * 256);
+
+console.log("RGB", `rgb(${color1}, ${color2}, ${color3})`);
