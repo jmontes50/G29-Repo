@@ -25,5 +25,9 @@ let nombrePropiedad = "color";
 console.log(gato[nombrePropiedad]);
 
 //desestructuración, si tu conoces un objeto puedes desestructurar sus propiedades
+/**
+ * let esAmigable = gato.esAmigable;
+ * let edad = gato.edad;
+ */
 let { esAmigable, nombre, edad, color } = gato; //crear nuevas variables
 console.log(esAmigable, nombre, color, edad);
