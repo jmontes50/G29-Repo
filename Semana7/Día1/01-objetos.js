@@ -15,3 +15,15 @@ let gato = {
 
 console.log(gato);
 console.table(gato);
+
+//notación de punto, la más común: nombreObjeto.nombrePropiedad
+console.log(gato.nombre);
+console.log(gato.edad)
+
+//bracket notation [], permite dar como str el nombre de una propiedad
+let nombrePropiedad = "color";
+console.log(gato[nombrePropiedad]);
+
+//desestructuración, si tu conoces un objeto puedes desestructurar sus propiedades
+let { esAmigable, nombre, edad, color } = gato; //crear nuevas variables
+console.log(esAmigable, nombre, color, edad);
