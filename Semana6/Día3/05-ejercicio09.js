@@ -22,3 +22,5 @@ function reorganizarArray(arreglo){
 }
 
 reorganizarArray([4, 5, 6]);
+reorganizarArray([1, 2, 3]);
+reorganizarArray([10, 20, 30]);
