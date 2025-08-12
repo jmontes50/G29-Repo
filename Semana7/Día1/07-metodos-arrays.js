@@ -37,3 +37,5 @@ let frutasSinA = frutas.filter(function(dato) {
 })
 
 console.log(frutasSinA);
+
+// frutas.filter(function(_, index){})
