@@ -28,3 +28,12 @@ console.log(frutasMayusculas);
 //   newFrutas.push(`${i} - ${frutas[i].toUpperCase()}`)
 // }
 // console.log(newFrutas)
+
+
+//las frutas que tengan una i
+let frutasSinA = frutas.filter(function(dato) {
+  //filter me pide retornar una expresión que de V o F
+  return dato.includes("i"); //booleano
+})
+
+console.log(frutasSinA);
