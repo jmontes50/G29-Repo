@@ -54,9 +54,10 @@ do {
     //leer
     //recorrer todo el almacén
     for (let i = 0; i < almacen.length; i++) {
-      let nombre = almacen[i].nombre;
-      let costo = almacen[i].costo;
-      let stock = almacen[i].stock;
+      // let nombre = almacen[i].nombre;
+      // let costo = almacen[i].costo;
+      // let stock = almacen[i].stock;
+      let { nombre, costo, stock } = almacen[i]; //desestructurando el objeto que esta dentro del array de almacén
 
       console.log(`Tienes ${nombre} con un valor de S/ ${costo * stock}`);
     }
