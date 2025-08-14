@@ -22,7 +22,7 @@ function prepareGifts(gifts) {
       if(gifts[i] === notDuplicates[j]){
         console.log("Encontrado!!!")
         exists = true;
-        break;
+        break; //se salta todo porque ya lo encontró
 
         // debugger;
       }
