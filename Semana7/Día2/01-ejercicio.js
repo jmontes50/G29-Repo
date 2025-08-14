@@ -8,14 +8,22 @@ console.log(preparedGifts1) // [1, 2, 3, 4, 5]
 */
 
 function prepareGifts(gifts) {
+  if(gifts.length === 0){
+    return [];
+  }
+
   let notDuplicates = [];
   //eliminar duplicados
   for(let i = 0; i < gifts.length; i++){ //aqui revisamos uno x uno dentro de gifts
     let exists = false;
     // debugger;
     for(let j = 0; j < notDuplicates.length; j++){ //aqui revisamos que no este dentro de los que quiero (los que ya existen)
+      console.log(`Comparando ${gifts[i]} vs ${notDuplicates[j]} `)
       if(gifts[i] === notDuplicates[j]){
+        console.log("Encontrado!!!")
         exists = true;
+        break;
+
         // debugger;
       }
     }
@@ -25,8 +33,13 @@ function prepareGifts(gifts) {
     }
   }
 
+  let orderedGifts = notDuplicates.sort(); //ordena de forma ascendente ya sea por A-Z 0-9
+  console.log("Ordered:", orderedGifts);
 
-  return notDuplicates;
+  return orderedGifts;
 }
 
-console.log(prepareGifts([3, 1, 2, 3, 4, 2, 5]))
+let whitoutDuplicates = prepareGifts([3, 1, 2, 3, 4, 2, 5]);
+
+
+console.log(whitoutDuplicates);
