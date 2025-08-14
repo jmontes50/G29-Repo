@@ -16,7 +16,7 @@ let bebidas = [
 ]
 
 //find busca un item en un arr, si lo encuentra lo retorna, si no da undefined
-let encontrado = bebidas.find(function(item) {
+let encontrado = bebidas.find(function(item, indice, arreglo) {
   // return item.nombre === "Inka Cola";
   return item.precio === 2.5;
 })
@@ -32,3 +32,10 @@ console.log("Sort", ordenado);
 
 console.log("edades", edades);
 
+//reduce // Este método SI es diferente en como se usa
+let sumaEdades = edades.reduce(function(acumulador, valorActual) {
+  console.log(acumulador, "- ", valorActual);
+  return acumulador + valorActual
+})
+
+console.log("Suma edades", sumaEdades);
