@@ -3,7 +3,7 @@ let productos = [
   { id: 2, nombre: "Mouse inalámbrico", precio: 80, stock: 50 },
   { id: 3, nombre: "Teclado mecánico", precio: 250, stock: 20 },
   { id: 4, nombre: "Monitor 24''", precio: 700, stock: 15 },
-  { id: 5, nombre: "Disco SSD 1TB", precio: 450, stock: 8 }
+  { id: 5, nombre: "Disco SSD 1TB", precio: 450, stock: 8 },
 ];
 
 console.table(productos);
@@ -14,17 +14,17 @@ let totalActual = 0;
 
 let presupuesto = Number(prompt("Cuanto presupuesto tiene"));
 
-for(let i = 0; i < productos.length; i++){
+for (let i = 0; i < productos.length; i++) {
   //restando cada vez si es que se compro algo
   console.log("Total actual:", totalActual);
   let presupuestoRestante = presupuesto - totalActual;
   console.log("Restante:", presupuestoRestante);
 
-  if(presupuestoRestante < productos[i].precio){
+  if (presupuestoRestante < productos[i].precio) {
     alert(`El presupuesto actual de ${presupuestoRestante}
           no permite comprar ${productos[i].nombre}
           que cuesta ${productos[i].precio}
-      `)
+      `);
     continue; //ignora y salta al siguiente bucle
   }
 
@@ -32,14 +32,30 @@ for(let i = 0; i < productos.length; i++){
     Ud está viendo el producto
     ${productos[i].nombre}
     Desea comprarlo?
-  `)
-  if(confirmar === true){
+  `);
+  if (confirmar === true) {
     carrito.push(productos[i]);
-    console.log(`Compro ${productos[i].nombre} a Compro ${productos[i].precio}`)
+    console.log(
+      `Compro ${productos[i].nombre} a Compro ${productos[i].precio}`
+    );
     //totalActual = totalActual + productos[i].precio
     //si compramos el totalActual se incrementa
-    totalActual += productos[i].precio
+    totalActual += productos[i].precio;
   }
 }
 
 console.table(carrito);
+
+/**
+ * //Ejemplo del continue
+ * let notas = [20, 18, 15, 12, 13, 11, 19];
+let aprobados = []
+for (let i = 0; i < notas.length; i++){
+  if(notas[i] < 13){
+      // console.log(`con una de ${notas[i]} no puedes aprobar`)
+    continue; //salta, ignora y pasa a la siguiente iteración
+  } //si salta no hara el push
+  aprobados.push(notas[i]);
+}
+console.log("fin de notas " + aprobados);
+ */
