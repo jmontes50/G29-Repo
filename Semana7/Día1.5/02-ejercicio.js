@@ -19,6 +19,15 @@ for(let i = 0; i < productos.length; i++){
   console.log("Total actual:", totalActual);
   let presupuestoRestante = presupuesto - totalActual;
   console.log("Restante:", presupuestoRestante);
+
+  if(presupuestoRestante < productos[i].precio){
+    alert(`El presupuesto actual de ${presupuestoRestante}
+          no permite comprar ${productos[i].nombre}
+          que cuesta ${productos[i].precio}
+      `)
+    continue; //ignora y salta al siguiente bucle
+  }
+
   let confirmar = confirm(`
     Ud está viendo el producto
     ${productos[i].nombre}
