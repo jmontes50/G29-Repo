@@ -34,8 +34,22 @@ console.log("edades", edades);
 
 //reduce // Este método SI es diferente en como se usa
 let sumaEdades = edades.reduce(function(acumulador, valorActual) {
-  console.log(acumulador, "- ", valorActual);
+  console.log(acumulador, " - ", valorActual);
   return acumulador + valorActual
 })
 
 console.log("Suma edades", sumaEdades);
+
+let productos = [
+  { nombre: "Jugo", precio: 3 },
+  { nombre: "Chocolate", precio: 4 },
+  { nombre: "Yogurt", precio: 6 }
+]
+
+let precioTotal = productos.reduce(function (acum, item){
+  console.log("reduce obj:", acum, item)
+  return acum + item.precio;
+  //el 2do argumento dado a un reduce, puede ser el equivalente al primer valor
+}, 0)
+
+console.log(precioTotal);
