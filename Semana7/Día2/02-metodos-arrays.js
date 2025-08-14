@@ -22,3 +22,13 @@ let encontrado = bebidas.find(function(item) {
 })
 
 console.log("Find:", encontrado);
+
+let edades = [27, 23, 18, 19, 50, 35, 34, 21];
+
+// let ordenado = edades.sort(); //ordena la referencia original
+let ordenado = edades.toSorted(); //no modifica la referencia original
+
+console.log("Sort", ordenado);
+
+console.log("edades", edades);
+
