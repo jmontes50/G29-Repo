@@ -40,3 +40,20 @@ const notas = [10, 15, 13, 17, 19, 12, 11, 16];
 const aprobados = notas.filter((nota) => nota >= 13);
 
 console.log("aprobados", aprobados)
+
+//-----------PARÁMETROS POR DEFECTO------------
+// const sumar = (a = 1, b = 2) => {
+//   console.log("A:",a);
+//   console.log("B:",b);
+//   return a + b;
+// }
+
+function sumar(a = 1, b = 2) {
+  console.log("A:",a);
+  console.log("B:",b);
+  return a + b;
+}
+
+console.log(sumar());
+
+console.log(sumar(100, 50));
