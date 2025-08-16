@@ -75,4 +75,17 @@ const estudiante = {
   nombres: "Jorge",
 }
 
-matricular(estudiante)
+matricular(estudiante);
+
+//DESESTRUCTURACIÓN DE ARREGLOS, tu conoces la posición y valores de los items en un arreglo
+const frutas = ["Kiwi", "Naranja", "Piña", "Tangelo"];
+
+// const fruta0 = fruta[0];
+// const fruta1 = frutas[1];
+// const fruta2 = frutas[2];
+// const fruta4 = fruta[4]
+
+const [ fruta0, fruta1, fruta2, fruta3 ] = frutas;
+
+console.log(fruta1);
+console.log(fruta2);
