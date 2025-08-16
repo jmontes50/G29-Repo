@@ -42,3 +42,18 @@ gato2.color = "manchadito";
 console.log("copiado con spread operator",gato2);
 
 console.log("viendo gato original", gato);
+
+///SPREAD OPERATOR EN ARRAYS
+const frutas = ["Kiwi", "Pomelo", "Manzana"];
+
+console.log(typeof frutas);
+
+const frutas2= [...frutas, "Pera", "Papaya"];
+
+console.log("FRUTAS2", frutas2)
+
+const verduras = ["Lechuga", "Tomate", "Zanahoria"];
+
+const canasta = [...frutas , ...verduras];
+
+console.log("canasta:", canasta);
