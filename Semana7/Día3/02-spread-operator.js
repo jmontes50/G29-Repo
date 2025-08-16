@@ -3,7 +3,7 @@ const pikachu1 = {
   ataque: 50,
   defensa: 35
 }
-//Copia por referencia
+//Copia por referencia, no copia los valores, solo la dirección, como si apuntara a la misma dirección
 const pikachu2 = pikachu1;
 
 //pobre pikachu pelear, cambiando la propiedad de salud
@@ -23,3 +23,16 @@ nota2 = 17;
 
 console.log("NOTA2", nota2);
 console.log("NOTA", nota);
+
+//-----------SPREAD OPERATOR (Operador de esparcimiento)------------
+const gato = {
+  nombre: "Michi",
+  color:"Naranja"
+}
+//El spread operator se simboliza con ...nombreRef
+const gato2 = { ...gato }
+
+gato2.color = "manchadito";
+console.log("copiado con spread operator",gato2);
+
+console.log("viendo gato original", gato);
