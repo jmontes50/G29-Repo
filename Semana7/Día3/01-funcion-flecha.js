@@ -31,3 +31,12 @@ const anadirDecimales = (numero) => numero.toFixed(2);
 
 console.log(anadirDecimales(100));
 
+const notas = [10, 15, 13, 17, 19, 12, 11, 16];
+
+//13 para arriba
+// const aprobados = notas.filter((nota) => {
+//   return nota >= 13;
+// })
+const aprobados = notas.filter((nota) => nota >= 13);
+
+console.log("aprobados", aprobados)
