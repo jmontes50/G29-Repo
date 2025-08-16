@@ -57,3 +57,22 @@ function sumar(a = 1, b = 2) {
 console.log(sumar());
 
 console.log(sumar(100, 50));
+
+//DESESTRUCTURACIÓN APLICADA A PARÁMETROS DE FUNCIONES
+const matricular = ({ nombres, apellidos, edad, dni, telefono }) => {
+  //sentencia 1...
+  //sentencia 2...
+  //sentencia 3...
+  console.log(`El estudiante ${nombres} ${apellidos} con dni ${dni} se matriculó`);
+}
+
+// matricular("montesinos", "jorge", 78901234, 30, 98978786578);
+const estudiante = {
+  apellidos: "Montesinos",
+  dni: 901234567,
+  edad: 35,
+  telefono: 1234565677,
+  nombres: "Jorge",
+}
+
+matricular(estudiante)
