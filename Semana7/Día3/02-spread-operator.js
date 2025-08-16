@@ -29,9 +29,15 @@ const gato = {
   nombre: "Michi",
   color:"Naranja"
 }
-//El spread operator se simboliza con ...nombreRef
-const gato2 = { ...gato }
 
+//El spread operator se simboliza con ...nombreRef
+//cuando hacemos spreadOperator, podemos agregar o modificar propiedades
+const gato2 = { ...gato, nombre: "Garfield", edad: 6 }
+
+//en un const no puedo reasignar
+// gato2 = { nombre: "gordooo"}
+
+//Pero si es algo interno del objeto, ASI SEA CONST, SII puedo modificarlo
 gato2.color = "manchadito";
 console.log("copiado con spread operator",gato2);
 
