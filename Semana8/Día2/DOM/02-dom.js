@@ -46,3 +46,18 @@ btnClick.addEventListener("click", function(){
   //setAttribute cambia o agrega un atributo con su valor a un elemento. element.setAttribute("nombre_attr", "valor_de_ese_attr")
   inputText.setAttribute("type", "text");
 });
+
+const piePagina = document.querySelector("footer");
+
+console.log("Pie:", piePagina);
+
+// piePagina.innerHTML = "Derechos Reservados";
+
+piePagina.innerHTML = `
+<div>
+  <h4>Información</h4>
+  <p>Encuentrenos en ...</p>
+</div>
+`
+
+piePagina.classList.add("pie");
