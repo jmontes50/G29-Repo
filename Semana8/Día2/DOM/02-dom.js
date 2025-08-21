@@ -34,3 +34,15 @@ const inputText = document.querySelector("#input-texto");
 console.log("input texto:", inputText);
 
 console.log(inputText.getAttribute("type"));
+
+const btnClick = document.getElementById("btn");
+
+console.log("button:", btnClick);
+
+//Que me permite escuchar eventos predefinidos
+//element.addEventListener("nombreevento", function_para_ejecutar)
+btnClick.addEventListener("click", function(){
+  alert("Hola mundo desde el evento!!!");
+  //setAttribute cambia o agrega un atributo con su valor a un elemento. element.setAttribute("nombre_attr", "valor_de_ese_attr")
+  inputText.setAttribute("type", "text");
+});
