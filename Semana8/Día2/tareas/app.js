@@ -40,13 +40,11 @@ const consultarTarea = () => {
     `
     */
     console.log("item:", item);
-    const elemTarea = ComponenteTarea(item, index);
+    //pasamos como referencia consultarTarea que dibuja las tareas
+    const elemTarea = ComponenteTarea(item, index, consultarTarea);
     //agregamos el divTarea retornado como hijo de divListaTareas
     divListaTareas.appendChild(elemTarea);
   })
-
-  console.log("Reporte de tareas:");
-  console.table(listaTareas);
 }
 consultarTarea();
 
