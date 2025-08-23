@@ -18,6 +18,13 @@ formRegistro.addEventListener("submit", (evento) => {
     aceptaTerminos: inputTerminos.checked
   }
   console.log("objUsuario", objUsuario)
+  //Aplicar JSON, JSON es un objeto de JS que tiene métodos para transformar de codigo js a string y viceversa
+  const objUsuarioJSON = JSON.stringify(objUsuario);
+  console.log("objUsuarioJSON:", objUsuarioJSON);
+  console.log("objUsuarioJSON typeof:", typeof objUsuarioJSON);
+
+  const objUsuarioParsed = JSON.parse(objUsuarioJSON);
+  console.log("objUsuarioParsed:", objUsuarioParsed)
 })
 
 inputNombre.addEventListener("input", (ev) => {
