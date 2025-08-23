@@ -12,11 +12,17 @@ console.log("info LS", infoLocalStorage);
 if(infoLocalStorage){ //si existe
   //lo convertimos de vuelta a JS
   const parsedInfo = JSON.parse(infoLocalStorage);
-  console.log("parsed", parsedInfo)
+  console.log("parsed", parsedInfo);
   //y usamos los valores de las propiedades para rellenar los values de los input
   inputNombre.value = parsedInfo.nombre;
   inputApellidos.value = parsedInfo.apellidos;
 }
+
+//setTimeout (funcion, tiempo en ms)
+setTimeout(() => {
+  console.log("ejecutando con setTimeout");
+  localStorage.removeItem("info-usuario");
+}, 10000)
 
 //el preventDefault aplica a formulario e hipervinculos <a>
 formRegistro.addEventListener("submit", (evento) => {
