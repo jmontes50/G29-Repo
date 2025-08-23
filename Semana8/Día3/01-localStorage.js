@@ -11,6 +11,13 @@ formRegistro.addEventListener("submit", (evento) => {
   evento.preventDefault();
   console.log(evento);
   console.log("ejecutando Submit!!!");
+  const objUsuario = {
+    nombre: inputNombre.value,
+    apellidos: inputApellidos.value,
+    //checked en input radio, checkbox, van a ser los que dicen si están verificados o no
+    aceptaTerminos: inputTerminos.checked
+  }
+  console.log("objUsuario", objUsuario)
 })
 
 inputNombre.addEventListener("input", (ev) => {
