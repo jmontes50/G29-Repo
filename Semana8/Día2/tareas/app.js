@@ -28,7 +28,7 @@ const consultarTarea = () => {
 */
   divListaTareas.innerHTML = ""; //limpiar una pizarra
 
-  listaTareas.forEach((item) => {
+  listaTareas.forEach((item, index) => {
     //a partir de un array volver a dibujar
     /*
     Usar innerHTML directamente puede ser contraproducente, porque estamos generando dinamicamente las tareas y el innnerHTML es un string
@@ -40,7 +40,7 @@ const consultarTarea = () => {
     `
     */
     console.log("item:", item);
-    const elemTarea = ComponenteTarea(item);
+    const elemTarea = ComponenteTarea(item, index);
     //agregamos el divTarea retornado como hijo de divListaTareas
     divListaTareas.appendChild(elemTarea);
   })

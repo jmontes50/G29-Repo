@@ -16,11 +16,17 @@ const agregarTarea = (tarea) => {
   console.log("Tarea Agregada!!");
 }
 
+const finalizarTarea = (indice) => {
+  //El indice será la posición, index del array
+  listaTareas[indice].finalizado = true;
+}
+
 //cuando tengo 01 sola referencia para exportar, lo ideal es default
 export default listaTareas;
 
 export {
-  agregarTarea
+  agregarTarea,
+  finalizarTarea
 }
 
 //si es más de 1, de 2 a más, usamos {}  -> export { ref1, ref2, ref3 ... }
