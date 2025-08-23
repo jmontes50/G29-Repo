@@ -1,4 +1,5 @@
 import listaTareas, { agregarTarea } from "./data.js";
+import ComponenteTarea from "./ComponenteTarea.js";
 
 const inputTarea = document.getElementById("input-tarea");
 const btnTarea = document.getElementById("btn-tarea");
@@ -29,7 +30,8 @@ const consultarTarea = () => {
 
   listaTareas.forEach((item) => {
     //a partir de un array volver a dibujar
-    /* Usar innerHTML directamente puede ser contraproducente, porque estamos generando dinamicamente las tareas y el innnerHTML es un string
+    /*
+    Usar innerHTML directamente puede ser contraproducente, porque estamos generando dinamicamente las tareas y el innnerHTML es un string
     divListaTareas.innerHTML = divListaTareas.innerHTML + `
       <div>
         <span>${item.tarea}<span> - ${item.finalizado ? "Hecho" : "Pendiente"}
@@ -37,6 +39,10 @@ const consultarTarea = () => {
       </div>
     `
     */
+    console.log("item:", item);
+    const elemTarea = ComponenteTarea(item);
+    //agregamos el divTarea retornado como hijo de divListaTareas
+    divListaTareas.appendChild(elemTarea);
   })
 
   console.log("Reporte de tareas:");
