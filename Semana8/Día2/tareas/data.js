@@ -6,7 +6,13 @@ const listaTareas = [
 ]
 
 const agregarTarea = (tarea) => {
-  listaTareas.push(tarea);
+  console.log("viendo-tarea:", tarea)
+  const objTarea = {
+    tarea: tarea,
+    finalizado: false
+  }
+  console.log("obj tarea:", objTarea)
+  listaTareas.push(objTarea);
   console.log("Tarea Agregada!!");
 }
 

@@ -37,5 +37,15 @@ const consultarTarea = () => {
   console.log("Reporte de tareas:");
   console.table(listaTareas);
 }
-
 consultarTarea();
+
+const app = () => {
+  btnTarea.addEventListener("click", () => {
+    // console.log("click de btn Tarea!!!");
+    //el valor de un input lo podemos obtener con la propiedad .value
+    console.log("Value Input Tarea:",inputTarea.value);
+    const textoNuevaTarea = inputTarea.value;
+    agregarTarea(textoNuevaTarea)
+  })
+}
+app();
