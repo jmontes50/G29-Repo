@@ -29,11 +29,14 @@ const consultarTarea = () => {
 
   listaTareas.forEach((item) => {
     //a partir de un array volver a dibujar
+    /* Usar innerHTML directamente puede ser contraproducente, porque estamos generando dinamicamente las tareas y el innnerHTML es un string
     divListaTareas.innerHTML = divListaTareas.innerHTML + `
       <div>
-        <span>${item.tarea}<span> - <button>Hecho!</button>
+        <span>${item.tarea}<span> - ${item.finalizado ? "Hecho" : "Pendiente"}
+        <button id="1">Hecho!</button>
       </div>
     `
+    */
   })
 
   console.log("Reporte de tareas:");
