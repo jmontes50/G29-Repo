@@ -4,6 +4,20 @@ const inputApellidos = document.getElementById("input-apellidos");
 const inputTerminos = document.querySelector("#input-terminos");
 const formRegistro = document.getElementById("registro");
 
+//leyendo la informacion de LS, da texto
+const infoLocalStorage = localStorage.getItem("info-usuario");
+
+console.log("info LS", infoLocalStorage);
+
+if(infoLocalStorage){ //si existe
+  //lo convertimos de vuelta a JS
+  const parsedInfo = JSON.parse(infoLocalStorage);
+  console.log("parsed", parsedInfo)
+  //y usamos los valores de las propiedades para rellenar los values de los input
+  inputNombre.value = parsedInfo.nombre;
+  inputApellidos.value = parsedInfo.apellidos;
+}
+
 //el preventDefault aplica a formulario e hipervinculos <a>
 formRegistro.addEventListener("submit", (evento) => {
   //submit tiene el evento/acción por defecto de intentar enviar los datos del formulario y recargar la app web.
@@ -24,7 +38,10 @@ formRegistro.addEventListener("submit", (evento) => {
   console.log("objUsuarioJSON typeof:", typeof objUsuarioJSON);
 
   const objUsuarioParsed = JSON.parse(objUsuarioJSON);
-  console.log("objUsuarioParsed:", objUsuarioParsed)
+  console.log("objUsuarioParsed:", objUsuarioParsed);
+
+  //.setItem("nombre", "valor a guardar ya en texto")
+  localStorage.setItem("info-usuario", objUsuarioJSON);
 })
 
 inputNombre.addEventListener("input", (ev) => {
