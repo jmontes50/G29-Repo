@@ -1,5 +1,11 @@
 import listaTareas, { agregarTarea } from "./data.js";
 
+const inputTarea = document.getElementById("input-tarea");
+const btnTarea = document.getElementById("btn-tarea");
+//recordemos que querySelector usa el selector como si fuera CSS
+const divListaTareas = document.querySelector("#lista-tareas");
+// console.log(inputTarea, btnTarea, divListaTareas);
+
 const consultarTarea = () => {
 /*
 //la forma antigua solo a nivel de datos
@@ -19,6 +25,15 @@ const consultarTarea = () => {
   } while ( continuar )
   //finalizando el do while
 */
+
+  listaTareas.forEach((item) => {
+    divListaTareas.innerHTML = divListaTareas.innerHTML + `
+      <div>
+        <span>${item.tarea}<span> - <button>Hecho!</button>
+      </div>
+    `
+  })
+
   console.log("Reporte de tareas:");
   console.table(listaTareas);
 }
