@@ -25,8 +25,10 @@ const consultarTarea = () => {
   } while ( continuar )
   //finalizando el do while
 */
+  divListaTareas.innerHTML = ""; //limpiar una pizarra
 
   listaTareas.forEach((item) => {
+    //a partir de un array volver a dibujar
     divListaTareas.innerHTML = divListaTareas.innerHTML + `
       <div>
         <span>${item.tarea}<span> - <button>Hecho!</button>
@@ -45,7 +47,9 @@ const app = () => {
     //el valor de un input lo podemos obtener con la propiedad .value
     console.log("Value Input Tarea:",inputTarea.value);
     const textoNuevaTarea = inputTarea.value;
-    agregarTarea(textoNuevaTarea)
+    agregarTarea(textoNuevaTarea);
+    //volver a llamar consultarTarea
+    consultarTarea();
   })
 }
 app();
