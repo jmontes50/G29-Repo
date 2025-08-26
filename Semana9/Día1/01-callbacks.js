@@ -11,10 +11,22 @@ const ejecutar1 = (otraFuncion) => {
   }, 3000)
 }
 
-const xFuncion = () => {
-  console.log("2. Estudiantes!!");
+// const xFuncion = () => {
+//   console.log("2. Estudiantes!!");
+// }
+
+//tener un callback hell no se considera una buena práctica
+// ejecutar1(xFuncion)
+//eventos, métodos de arrays (map, forEach, filter, reduce)
+const otroEjecutar = (callback) => {
+  console.log("otro ejecutar!!")
+  callback();
 }
 
-ejecutar1(xFuncion)
-
+ejecutar1(() => {
+  console.log("2. Estudiantes!!");
+  otroEjecutar(() => {
+    console.log("Más ejecutar")
+  })
+})
 
