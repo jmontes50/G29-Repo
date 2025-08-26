@@ -8,14 +8,27 @@
 // .then((users) => {
 //   console.log("Usuarios", users);
 // })
+const bodyHTML = document.querySelector("body");
 
 const getUsers = async () => {
   try {
     const respuesta = await fetch("https://jsonplaceholder.typicode.com/users");
     const users =  await respuesta.json()
-    console.log(users)
+    console.log(users);
+
+    users.forEach((user) => {
+    bodyHTML.innerHTML = bodyHTML.innerHTML + `
+      <div>
+        <h4>${user.name}</h4>
+        <p>${user.email} - ${user.company.name}</p>
+      </div>
+    `;
+    })
+
+
   } catch (error) {
     console.log(error);
   }
 }
 getUsers();
+
