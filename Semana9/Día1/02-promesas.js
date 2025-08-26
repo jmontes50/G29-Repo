@@ -16,7 +16,7 @@ const hacerCanchita = () => {
     setTimeout(() => {
       // console.log("Canchita hecha!!!");
       resolve("Canchita hechaa!!!!"); //resultado positivo
-      // reject("No se acabó la canchita")
+      // reject("No se acabó la canchita"); //resultado negativo
     }, 3000);
   });
 };
@@ -25,7 +25,14 @@ const hacerCanchita = () => {
 const pedirBebida = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("La bebida esta lista");
+
+      const suerte = Math.random();
+      console.log(suerte);
+      if(suerte > 0.5){ //resolve
+        resolve("La bebida esta lista");
+      }else{
+        reject("la bebida se derramó");
+      }
     }, 2000);
   });
 
