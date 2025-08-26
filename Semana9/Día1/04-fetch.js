@@ -32,3 +32,14 @@ const getUsers = async () => {
 }
 getUsers();
 
+const getProducts = async () => {
+  try {
+    const res = await fetch("https://68ad2f03a0b85b2f2cf263b4.mockapi.io/productos")
+    console.log(res);
+    const data = await res.json();
+    console.log(data)
+  } catch (error) {
+
+  }
+}
+getProducts();
