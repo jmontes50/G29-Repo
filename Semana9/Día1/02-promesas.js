@@ -51,3 +51,10 @@ hacerCanchita()
   .catch((err) => {
     console.log(err);
   });
+
+  //---------------------------------------------------------------
+
+  fetch('https://jsonplaceholder.typicode.com/users')
+  .then((respuesta) => {
+    console.log(respuesta);
+  })
