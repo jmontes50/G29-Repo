@@ -15,18 +15,32 @@ const hacerCanchita = () => {
     //el código asíncrono va a estar dentro de la función de la nueva Promesa
     setTimeout(() => {
       // console.log("Canchita hecha!!!");
-      // resolve("Canchita hechaa!!!!");//resultado positivo
-      reject("No se acabó la canchita")
+      resolve("Canchita hechaa!!!!"); //resultado positivo
+      // reject("No se acabó la canchita")
     }, 3000);
   });
 };
 
+//retornando directamente la función flecha
+const pedirBebida = () =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("La bebida esta lista");
+    }, 2000);
+  });
+
 hacerCanchita()
-.then((respuesta) => {
-  // console.log(respuesta);
-  console.log(`${respuesta}, vamos a la entrada`);
-  console.log("validando entrada...");
-})
-.catch((err) => {
-  console.log(err);
-})
+  .then((respuesta) => {
+    console.log(respuesta);
+    return pedirBebida(); //estaria retornando otra promesa
+    //al retornar otra promesa, podemos encandenar un then y tener encadenamiento de promesas+
+    // console.log(respuesta) ;
+    // console.log(`${respuesta}, vamos a la entrada`);
+    // console.log("validando entrada...");
+  })
+  .then((respuestaBebida) => {
+    console.log(respuestaBebida);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
