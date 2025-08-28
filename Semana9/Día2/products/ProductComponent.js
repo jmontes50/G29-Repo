@@ -1,10 +1,10 @@
 //ProductComponent.js
 /** JSDoc
  *
- * @param { product_nombre, producto_imagen, producto_descripcion, producto_precio, id} objProducto
+ * @param { producto_nombre, producto_imagen, producto_descripcion, producto_precio, id} objProducto
  */
 const ProductComponent = (objProducto) => {
-  const { product_nombre, producto_imagen, producto_descripcion, producto_precio, id } = objProducto;
+  const { producto_nombre, producto_imagen, producto_descripcion, producto_precio, id } = objProducto;
   const div = document.createElement("div");
   div.innerHTML = `
     <div>
