@@ -7,8 +7,11 @@ const formProducto = document.getElementById("form-producto");
 const inputNombre = document.getElementById("producto-nombre");
 const inputPrecio = document.getElementById("producto-precio");
 
-const dibujarProductos = (productosObtenidos) => {
+const dibujarProductos = async () => {
+  const productosObtenidos = await obtenerProductos();
+
   seccionProductos.innerHTML = ""; //limpiando
+
   productosObtenidos.forEach((producto) => {
       const divProducto = ProductComponent(producto);
     seccionProductos.appendChild(divProducto);
@@ -17,9 +20,9 @@ const dibujarProductos = (productosObtenidos) => {
 
 
 const App = async () => {
-  const productosObtenidos = await obtenerProductos();
+  // const productosObtenidos = await obtenerProductos();
   // console.log(productosObtenidos)
-  dibujarProductos(productosObtenidos)
+  dibujarProductos();
 
   //Creación de producto
   formProducto.addEventListener("submit", async (ev) => {
@@ -32,6 +35,8 @@ const App = async () => {
     }
     console.log(objNuevoProducto)
     await crearProducto(objNuevoProducto)
+    //volvemos a llamar para obtener lod productos y dibujarlos
+    dibujarProductos();
   })
 }
 App();
