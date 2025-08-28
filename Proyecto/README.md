@@ -1,4 +1,4 @@
-# G9Java – MVP CRUD (React)
+# G29 – MVP CRUD con React
 
 ## Índice
 1. [Resumen del proyecto (MVP)](#resumen-del-proyecto-mvp)  
@@ -78,8 +78,8 @@ Con React:
 
 ```bash
 # 1) Crear proyecto
-npm create vite@latest g9java-crud -- --template react
-cd g9java-crud
+npm create vite@latest g29-crud -- --template react
+cd g29-crud
 
 # 2) Instalar dependencias
 npm install
@@ -97,8 +97,6 @@ npm run dev
 ## Entregables
 - Código en el repositorio con este README actualizado.  
 - URL de la API en MockAPI (un recurso único).  
-- Instrucciones claras para correr el proyecto.  
-- Capturas o un pequeño gif mostrando las 4 operaciones del CRUD.  
 
 ---
 
@@ -113,10 +111,10 @@ npm run dev
 ---
 
 ## Etapas de desarrollo
-1. **Definir el recurso y campos** (ej. `tasks` con `title`, `description`).  
+1. **Definir en mockapi los recursos y campos** (ej. `tasks` con `title`, `description`).  
 2. **Preparar el proyecto React** y configurar MockAPI.  
 3. **Listar (Read):** mostrar los datos con estados de carga/error.  
 4. **Crear (Create):** formulario controlado y POST a MockAPI.  
 5. **Editar (Update):** reusar formulario o modal para actualizar.  
 6. **Eliminar (Delete):** borrar con confirmación y actualizar vista.  
-7. **Pulir y entregar:** revisar UX básica, completar README y agregar capturas.
+7. **Pulir y entregar**: Presentar repositorio si es posible deployeado.
