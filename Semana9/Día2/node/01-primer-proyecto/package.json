@@ -1,0 +1,23 @@
+{
+  "name": "demo-node",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Primer proyecto de node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "modulo",
+    "codigo",
+    "ecommerce"
+  ],
+  "author": "Jorge Montesinos",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.11.0"
+  }
+}
