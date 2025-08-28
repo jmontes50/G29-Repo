@@ -22,14 +22,20 @@ const crearProducto = async (nuevoProducto) => {
       headers: {
         //aquí agregamos los headers
         'Content-Type': 'application/json' //cabecera de contenido
-      }
+      },
+      //body, lo que vamos a enviar, en este caso un JSON
+      body: JSON.stringify(nuevoProducto)
     }
-    const respuesta = await fetch(URL, )
+    const respuesta = await fetch(URL, configuracion);
+    console.log({ respuesta });
+    const data = await respuesta.json();
+    console.log({ data });
   } catch (error) {
-
+    console.log({ error })
   }
 }
 
 export {
-  obtenerProductos
+  obtenerProductos,
+  crearProducto
 }
