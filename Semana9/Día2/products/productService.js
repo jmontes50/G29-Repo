@@ -15,6 +15,20 @@ const obtenerProductos = async () => {
   }
 }
 
+const crearProducto = async (nuevoProducto) => {
+  try {
+    const configuracion = {
+      method: 'POST', //PUT, DELETE
+      headers: {
+        //aquí agregamos los headers
+        'Content-Type': 'application/json' //cabecera de contenido
+      }
+    }
+    const respuesta = await fetch(URL, )
+  } catch (error) {
+
+  }
+}
 
 export {
   obtenerProductos
