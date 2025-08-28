@@ -1,5 +1,5 @@
 //script.js
-import { obtenerProductos } from "./productService.js";
+import { obtenerProductos, crearProducto } from "./productService.js";
 import ProductComponent from "./ProductComponent.js";
 
 const seccionProductos = document.getElementById("seccion-productos");
@@ -22,7 +22,7 @@ const App = async () => {
   dibujarProductos(productosObtenidos)
 
   //Creación de producto
-  formProducto.addEventListener("submit", (ev) => {
+  formProducto.addEventListener("submit", async (ev) => {
     ev.preventDefault(); //prevenimos el evento por defecto
     // console.log("submit!!!")
     // console.log(typeof inputPrecio.value)
@@ -31,6 +31,7 @@ const App = async () => {
       producto_precio: Number(inputPrecio.value)
     }
     console.log(objNuevoProducto)
+    await crearProducto(objNuevoProducto)
   })
 }
 App();
