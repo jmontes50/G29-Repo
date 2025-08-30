@@ -30,6 +30,7 @@ const App = () => {
           texto={texto1}
           fecha="29/08"
           numero={numero}
+          accion={fAlerta}
         />
         <Parrafo
           texto="Pan con chicharron"
