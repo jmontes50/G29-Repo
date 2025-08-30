@@ -46,6 +46,7 @@ El proyecto debe cubrir la base de un CRUD con **MockAPI** y un único recurso (
 - MockAPI para simular el backend  
 
 **Recursos de apoyo**  
+- [Guía para Planificar MVP de CRUD](./recursos/README.md)
 - [Resources/README.md](https://github.com/jmontes50/G9Java/blob/master/Info/Resources/README.md)  
 - Documentación oficial de React: <https://react.dev>  
 - MockAPI: <https://mockapi.io/>
