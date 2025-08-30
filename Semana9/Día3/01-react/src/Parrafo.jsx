@@ -3,6 +3,8 @@ const Parrafo = (props) => {
 
   return <p>
     Lorem ipsum, {props.texto}
+    <br />
+    Numero: {props.numero}
   </p>
 }
 

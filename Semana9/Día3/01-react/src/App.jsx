@@ -5,6 +5,12 @@ import Parrafo from "./Parrafo";
 const App = () => {
   const teams = "Equipos";
   //codigooo que desee
+  const texto1 = "Concurso de desayunos";
+  const texto2 = "Latinoamerica";
+
+  const numero = 1000;
+
+  const fAlerta = () => alert("Soy una alerta!");
 
   //2. si queremos mostrar una expresión de JS en el JSX para que se muestre abrimos { y ponemos la referencia de js }
   //3. tiene que retornar JSX (JS extensión) que es como html y SOLO podemos retornar 01 ELEMENTO
@@ -21,10 +27,15 @@ const App = () => {
         {/* 4. Todo el jsx ya sea html u otros componente, TIENEN QUE TENER ETIQUETA DE CIERRE Ó AUTOCIERRE */}
         {/* los props que se añaden com atributos personalizados en el JSX, llegan al componente de destino como un argumento en forma de objeto para poder ser utilizados */}
         <Parrafo
-          texto="Hola saludos!" fecha="29/08"
+          texto={texto1}
+          fecha="29/08"
+          numero={numero}
         />
-        <Parrafo texto="Pan con chicharron"/>
-        <Parrafo texto="El otro desayuno"/>
+        <Parrafo
+          texto="Pan con chicharron"
+          numero={200}
+        />
+        <Parrafo texto={texto2} numero={500}/>
       </section>
     </>
   );
