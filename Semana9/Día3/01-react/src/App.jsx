@@ -1,3 +1,6 @@
+//En los import que sean de archivos .js o .jsx No es necesario agregar la extensión a la ruta
+import Parrafo from "./Parrafo";
+
 //1. El nombre de los componentes siempre tiene que comenzar con mayuscula
 const App = () => {
   const teams = "Equipos";
@@ -13,6 +16,11 @@ const App = () => {
       {console.log("Estoy dentro del JSX")}
       <h2>Como están? {10 + 10}</h2>
       <h4>Espero que bien</h4>
+      <section>
+        <Parrafo />
+        <Parrafo />
+        <Parrafo />
+      </section>
     </>
   );
 }
