@@ -16,10 +16,15 @@ const App = () => {
       {console.log("Estoy dentro del JSX")}
       <h2>Como están? {10 + 10}</h2>
       <h4>Espero que bien</h4>
+      <hr/>
       <section>
-        <Parrafo />
-        <Parrafo />
-        <Parrafo />
+        {/* 4. Todo el jsx ya sea html u otros componente, TIENEN QUE TENER ETIQUETA DE CIERRE Ó AUTOCIERRE */}
+        {/* los props que se añaden com atributos personalizados en el JSX, llegan al componente de destino como un argumento en forma de objeto para poder ser utilizados */}
+        <Parrafo
+          texto="Hola saludos!" fecha="29/08"
+        />
+        <Parrafo texto="Pan con chicharron"/>
+        <Parrafo texto="El otro desayuno"/>
       </section>
     </>
   );

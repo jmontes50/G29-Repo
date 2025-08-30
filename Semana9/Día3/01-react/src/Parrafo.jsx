@@ -1,6 +1,8 @@
-const Parrafo = () => {
+const Parrafo = (props) => {
+  console.log(props)
+
   return <p>
-    Lorem ipsum dolor sit amet.
+    Lorem ipsum, {props.texto}
   </p>
 }
 
