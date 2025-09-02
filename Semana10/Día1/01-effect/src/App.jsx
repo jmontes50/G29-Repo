@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Boton from "./Boton";
+import Observador from "./Observador";
 
 const App = () => {
   const [contador, setContador] = useState(1);
@@ -20,6 +21,8 @@ const App = () => {
       </button>
       <hr />
       <Boton manejarContador={manejarContador} />
+      <hr/>
+      <Observador />
     </>
   )
 }
