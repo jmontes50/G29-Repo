@@ -19,7 +19,7 @@ const App = () => {
         Aumentar
       </button>
       <hr />
-      <Boton />
+      <Boton manejarContador={manejarContador} />
     </>
   )
 }

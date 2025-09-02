@@ -1,7 +1,9 @@
-const Boton = () => {
+const Boton = (props) => {
+
+  console.log("PROPS:", props);
 
   return (
-    <button>
+    <button onClick={props.manejarContador}>
       Aumentar desde botón hijo
     </button>
   )
