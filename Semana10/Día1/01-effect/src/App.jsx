@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Boton from "./Boton";
 
 const App = () => {
   const [contador, setContador] = useState(1);
@@ -11,11 +12,14 @@ const App = () => {
   }
 
   return (
+    // EL Fragment <> es un elemento que no se renderiza/dibuja
     <>
       <h1>App: {contador}</h1>
       <button onClick={manejarContador}>
         Aumentar
       </button>
+      <hr />
+      <Boton />
     </>
   )
 }
