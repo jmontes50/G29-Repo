@@ -4,13 +4,17 @@ import Observador from "./Observador";
 
 const App = () => {
   const [contador, setContador] = useState(1);
-  const [prendido, setPrendido] = useState(false);
+  const [prendido, setPrendido] = useState(true);
 
   // console.log(contador)
   // console.log("setContador", setContador)
 
   const manejarContador = () => {
     setContador(contador + 1);
+  }
+
+  const manejarPrendido = () => {
+    setPrendido(!prendido);
   }
 
   //useEffect(función, [dependencias])
@@ -34,6 +38,9 @@ const App = () => {
       <hr />
       {/* renderizado condicional */}
       {prendido ? <p>"Esta prendido💡"</p> : <p>"Esta apagado 📴 "</p>}
+      <button onClick={manejarPrendido}>
+        Interruptor
+      </button>
     </>
   )
 }
