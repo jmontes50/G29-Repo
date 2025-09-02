@@ -1,6 +1,6 @@
 const Boton = (props) => {
 
-  console.log("PROPS:", props);
+  // console.log("PROPS:", props);
 
   return (
     <button onClick={props.manejarContador}>
