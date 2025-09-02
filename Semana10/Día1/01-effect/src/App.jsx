@@ -22,7 +22,7 @@ const App = () => {
       <hr />
       <Boton manejarContador={manejarContador} />
       <hr/>
-      <Observador />
+      <Observador contador={contador} />
     </>
   )
 }
