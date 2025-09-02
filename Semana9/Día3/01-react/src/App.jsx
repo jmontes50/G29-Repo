@@ -17,7 +17,7 @@ const App = () => {
   return (
     //Fragment <></>, No se renderiza, no le podemos añadir cosas visuales
     <>
-      {/* Si deseamos incluir expresiones de JS abrimos ñ{} en el JSX */}
+      {/* Si deseamos incluir expresiones de JS abrimos {} en el JSX */}
       <h1>Hola {teams}</h1>
       {console.log("Estoy dentro del JSX")}
       <h2>Como están? {10 + 10}</h2>
