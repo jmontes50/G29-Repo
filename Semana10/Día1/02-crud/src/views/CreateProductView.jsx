@@ -8,7 +8,9 @@ const CreateProductView = () => {
   })
 
   const handleInput = (event) => {
-    console.log(event)
+    console.log(event.target.value);
+
+    setProduct({...product, producto_nombre: event.target.value})
   }
   /**1.Obj: crear un nuevo registro
    * 2 de donde sacamos los datos -> form
@@ -20,8 +22,8 @@ const CreateProductView = () => {
     <div>
       <h1>Crear Producto</h1>
       <form>
-        <input type="text" placeholder="Nombre" value={product.producto_nombre} handleInput={handleInput}/>
-        <input type="number" placeholder="Precio" value={product.producto_precio}  handleInput={handleInput}/>
+        <input type="text" placeholder="Nombre" value={product.producto_nombre} onChange={handleInput}/>
+        <input type="number" placeholder="Precio" value={product.producto_precio}  onChange={handleInput}/>
 
       </form>
     </div>
