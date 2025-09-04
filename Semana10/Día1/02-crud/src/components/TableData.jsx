@@ -36,10 +36,11 @@ const TableData = ({ data, headers }) => { //recordemos que los props son un obj
     </thead>
     <tbody>
       {/* recorrer todos los productos/items 1 x 1 */}
-      {data.map((item) => (
+      {/* Validamos 1ero si data existe(es truthy), si es así continuamos */}
+      {data && data.map((item) => (
         <tr key={item.id}>
           {headers.map((head, index) => (
-            <td key={index}>
+            <td key={index} className="border-t-2 px-4 py-2">
               {item[head.name]}
             </td>
           ))}
