@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { readProducts } from "../services/productService";
+import TableData from "../components/TableData";
 
 const ProductsView = () => {
   //truthy y falsy
@@ -37,6 +38,7 @@ const ProductsView = () => {
       ) : ( //si no hay productos muestro otro mensaje
         <p>No hay productos aún</p>
       )}
+      <TableData data={products} />
     </div>
   );
 };
