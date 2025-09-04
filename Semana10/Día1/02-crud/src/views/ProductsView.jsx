@@ -11,6 +11,12 @@ const ProductsView = () => {
    * 4. Cómo los muestro??? -> transformandolo a algo que el navegador entienda
    */
 
+  const headers = [
+    { name: "producto_nombre", label: "Nombre"},
+    { name: "producto_descripcion", label: "Descripción"},
+    { name: "producto_precio", label: "Precio"}
+  ]
+
   useEffect(() => {
     const getProducts = async () => {
       try {
@@ -38,7 +44,7 @@ const ProductsView = () => {
       ) : ( //si no hay productos muestro otro mensaje
         <p>No hay productos aún</p>
       )}
-      <TableData data={products} />
+      <TableData data={products} headers={headers} />
     </div>
   );
 };
