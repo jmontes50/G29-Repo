@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { readProducts } from "../services/productService";
 
 const ProductsView = () => {
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
   /**1. Objetivo:mostrar productos
    * 2. Donde estan los productos -> mockapi
    * 3. Cómo los obtengo???? -> axios/service
@@ -12,8 +12,9 @@ const ProductsView = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const respuesta = await readProducts();
-        console.log(respuesta);
+        const productsObtained = await readProducts();
+        console.log(productsObtained);
+        setProducts(productsObtained);
       } catch (error) {
         console.log(error)
       }
@@ -21,8 +22,15 @@ const ProductsView = () => {
     getProducts();
   }, []);
 
+  //Renderizado de listas
 
-  return <div>ProductsView</div>;
+  return <div>
+    {products.map((prod) => (
+      <div>
+        <h3>{prod.producto_nombre}</h3>
+      </div>
+    ))}
+  </div>;
 };
 
 export default ProductsView;
