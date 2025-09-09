@@ -2,19 +2,20 @@ import { useState } from "react";
 
 const CreateProductView = () => {
   const [product, setProduct] = useState({
-    producto_nombre:"",
-    producto_descripcion:"",
-    producto_precio:0,
-  })
+    producto_nombre: "",
+    producto_descripcion: "",
+    producto_precio: 0,
+  });
 
   const handleInput = (event) => {
+    console.log("target", event.target);
     console.log(event.target.value);
 
-    setProduct({...product, producto_nombre: event.target.value})
-  }
+    setProduct({ ...product, [event.target.name]: event.target.value });
+  };
   /**1.Obj: crear un nuevo registro
    * 2 de donde sacamos los datos -> form
-   * 3. tengo los datos tengo que transformarlos
+   * 3. tengo los datos tengo que transformarlos -> JSON
    * 4. Envio
    * 5. tengo que mostrar un feedback
    */
@@ -22,12 +23,23 @@ const CreateProductView = () => {
     <div>
       <h1>Crear Producto</h1>
       <form>
-        <input type="text" placeholder="Nombre" value={product.producto_nombre} onChange={handleInput}/>
-        <input type="number" placeholder="Precio" value={product.producto_precio}  onChange={handleInput}/>
-
+        <input
+          type="text"
+          placeholder="Nombre"
+          value={product.producto_nombre}
+          onChange={handleInput}
+          name="producto_nombre"
+        />
+        <input
+          type="number"
+          placeholder="Precio"
+          value={product.producto_precio}
+          onChange={handleInput}
+          name="producto_precio"
+        />
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default CreateProductView
+export default CreateProductView;
