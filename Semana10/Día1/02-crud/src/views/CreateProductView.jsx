@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "../components/Input";
 import { createProduct } from "../services/productService";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CreateProductView = () => {
   const [product, setProduct] = useState({
@@ -9,6 +10,8 @@ const CreateProductView = () => {
     producto_descripcion: "",
     producto_precio: 0,
   });
+
+  let navigate = useNavigate();
 
   const handleInput = (event) => {
     console.log("target", event.target);
@@ -22,12 +25,15 @@ const CreateProductView = () => {
     try {
       await createProduct(product);
       // alert("Producto Creado");
-      Swal.fire({
+      await Swal.fire({
         title:`${product.producto_nombre} creado exitosamente`,
         text: "Operación realizada",
         icon: "success",
         theme: "dark"
       })
+      // console.log("El usuario interactuo!!")
+      //navigate puede recibir la ruta a la que deseamos ir
+      navigate('/');
     } catch (error) {
       console.log(error);
     }
