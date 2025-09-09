@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "../components/Input";
 import { createProduct } from "../services/productService";
+import Swal from "sweetalert2";
 
 const CreateProductView = () => {
   const [product, setProduct] = useState({
@@ -20,7 +21,13 @@ const CreateProductView = () => {
     event.preventDefault();
     try {
       await createProduct(product);
-      alert("Producto Creado")
+      // alert("Producto Creado");
+      Swal.fire({
+        title:`${product.producto_nombre} creado exitosamente`,
+        text: "Operación realizada",
+        icon: "success",
+        theme: "dark"
+      })
     } catch (error) {
       console.log(error);
     }
