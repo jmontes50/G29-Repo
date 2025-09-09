@@ -3,10 +3,11 @@ const Input = (props) => {
 
   return (
     <div className="mb-3 p-2">
-      <label className="block mb-1">
+      <label className="block mb-1" htmlFor={name}>
         {label}
       </label>
       <input
+        id={name}
         type={type}
         placeholder={`Ingrese ${label}`}
         name={name}
