@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "../components/Input";
+import { createProduct } from "../services/productService";
 
 const CreateProductView = () => {
   const [product, setProduct] = useState({
@@ -14,6 +15,16 @@ const CreateProductView = () => {
 
     setProduct({ ...product, [event.target.name]: event.target.value });
   };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await createProduct(product);
+      alert("Producto Creado")
+    } catch (error) {
+      console.log(error);
+    }
+  }
   /**1.Obj: crear un nuevo registro
    * 2 de donde sacamos los datos -> form
    * 3. tengo los datos tengo que transformarlos -> JSON
@@ -29,7 +40,8 @@ const CreateProductView = () => {
   return (
     <div>
       <h1>Crear Producto</h1>
-      <form>
+      {/* el submit del form tiene evento por defecto */}
+      <form onSubmit={handleSubmit}>
         {inputsInfo.map((item, index) => (
           <Input
             key={index}
@@ -40,6 +52,9 @@ const CreateProductView = () => {
             handleInput={handleInput}
           />
         ))}
+        <button type="submit" className="bg-green-600 text-white p-3 rounded">
+          Guardar
+        </button>
       </form>
     </div>
   );
