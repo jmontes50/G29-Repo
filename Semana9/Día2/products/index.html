@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-family: Arial;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="seccion-crear">
+      <!-- vacio -->
+       <form id="form-producto">
+        <input
+          type="text"
+          placeholder="Nombre producto"
+          id="producto-nombre"
+        />
+        <input
+          type="text"
+          placeholder="Precio producto"
+          id="producto-precio"
+        />
+        <!-- la descripción la generará mockapi, es opcional dársela -->
+        <button type="submit">
+          Guardar
+        </button>
+       </form>
+    </section>
+    <section id="seccion-productos">
+      <!-- aquí irán los productos -->
+    </section>
+  </main>
+
+
+  <script src="./script.js" type="module" ></script>
+</body>
+</html>
