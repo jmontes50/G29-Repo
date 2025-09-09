@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Input from "../components/Input";
 
 const CreateProductView = () => {
   const [product, setProduct] = useState({
@@ -19,24 +20,26 @@ const CreateProductView = () => {
    * 4. Envio
    * 5. tengo que mostrar un feedback
    */
+  const inputsInfo = [
+    { name: "producto_nombre", label: "Nombre del producto", type: "text" },
+    { name: "producto_descripcion", label: "Descripción", type: "text" },
+    { name: "producto_precio", label: "Precio del producto", type: "number" },
+  ]
+
   return (
     <div>
       <h1>Crear Producto</h1>
       <form>
-        <input
-          type="text"
-          placeholder="Nombre"
-          value={product.producto_nombre}
-          onChange={handleInput}
-          name="producto_nombre"
-        />
-        <input
-          type="number"
-          placeholder="Precio"
-          value={product.producto_precio}
-          onChange={handleInput}
-          name="producto_precio"
-        />
+        {inputsInfo.map((item, index) => (
+          <Input
+            key={index}
+            value={product}
+            name={item.name}
+            label={item.label}
+            type={item.type}
+            handleInput={handleInput}
+          />
+        ))}
       </form>
     </div>
   );
