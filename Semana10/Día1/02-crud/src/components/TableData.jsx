@@ -1,5 +1,5 @@
-
-const TableData = ({ data, headers }) => { //recordemos que los props son un objeto
+const TableData = ({ data, headers, actions }) => {
+  //recordemos que los props son un objeto
   // console.log("TableData", data)
   /*
   return (
@@ -22,33 +22,40 @@ const TableData = ({ data, headers }) => { //recordemos que los props son un obj
     </table>
   )
   */
- return (
-  // Cuando queramos utilizar class en React, utilizaremos className como reemplazo
-  <table className="border-collapse border-t-2 w-full">
-    <thead>
-      <tr>
-        {headers.map((item, index) => (
-          <th key={index} className="px-4 py-2">
-            {item.label}
-          </th>
-        ))}
-      </tr>
-    </thead>
-    <tbody>
-      {/* recorrer todos los productos/items 1 x 1 */}
-      {/* Validamos 1ero si data existe(es truthy), si es así continuamos */}
-      {data && data.map((item) => (
-        <tr key={item.id}>
-          {headers.map((head, index) => (
-            <td key={index} className="border-t-2 px-4 py-2">
-              {item[head.name]}
-            </td>
+  return (
+    // Cuando queramos utilizar class en React, utilizaremos className como reemplazo
+    <table className="border-collapse border-t-2 w-full">
+      <thead>
+        <tr>
+          {headers.map((item, index) => (
+            <th key={index} className="px-4 py-2">
+              {item.label}
+            </th>
           ))}
         </tr>
-      ))}
-    </tbody>
-  </table>
- )
-}
+      </thead>
+      <tbody>
+        {/* recorrer todos los productos/items 1 x 1 */}
+        {/* Validamos 1ero si data existe(es truthy), si es así continuamos */}
+        {data &&
+          data.map((item) => (
+            <tr key={item.id}>
+              {headers.map((head, index) => (
+                <td key={index} className="border-t-2 px-4 py-2">
+                  {item[head.name]}
+                </td>
+              ))}
+              {/* actions */}
+              {actions.map((item, i) => (
+                <td key={i} className="border-t-2 px-4 py-2">
+                  {item.content}
+                </td>
+              ))}
+            </tr>
+          ))}
+      </tbody>
+    </table>
+  );
+};
 
-export default TableData
+export default TableData;

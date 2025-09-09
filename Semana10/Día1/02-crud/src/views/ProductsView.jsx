@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { readProducts } from "../services/productService";
 import TableData from "../components/TableData";
+import { Pencil } from 'lucide-react';
 
 const ProductsView = () => {
   //truthy y falsy
@@ -14,11 +15,27 @@ const ProductsView = () => {
   const headers = [
     //name será el nombre del campo desde la API
     //label como queremos mostrarlo
-    { name: "producto_nombre", label: "Nombre"},
-    { name: "producto_descripcion", label: "Descripción"},
-    { name: "producto_precio", label: "Precio"},
+    { name: "producto_nombre", label: "Nombre" },
+    { name: "producto_descripcion", label: "Descripción" },
+    { name: "producto_precio", label: "Precio" },
     // { name: "producto_imagen", label: "Imagen"}
-  ]
+  ];
+
+  //creamos un arreglo de acciones (editar, eliminar)
+  const actionsTable = [
+    {
+      content: (
+        <button
+          className="btn btn-sm bg-yellow-500 text-white"
+          onClick={() => {
+            console.log("Editar!!!!");
+          }}
+        >
+          <Pencil />
+        </button>
+      ),
+    },
+  ];
 
   useEffect(() => {
     const getProducts = async () => {
@@ -47,7 +64,7 @@ const ProductsView = () => {
       ) : ( //si no hay productos muestro otro mensaje
         <p>No hay productos aún</p>
       )} */}
-      <TableData data={products} headers={headers} />
+      <TableData data={products} headers={headers} actions={actionsTable} />
     </div>
   );
 };
