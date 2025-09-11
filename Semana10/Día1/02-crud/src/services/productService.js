@@ -3,42 +3,47 @@ import axios from "axios";
 
 const readProducts = async () => {
   try {
-    const result =  await axios.get("https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos");
+    const result = await axios.get(
+      "https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos"
+    );
     // console.log(result);
-    if(result.status === 200){
+    if (result.status === 200) {
       return result.data;
     } else {
-      throw new Error("error al solicitar datos")
+      throw new Error("error al solicitar datos");
     }
-
   } catch (error) {
     // console.log(error)
-    throw error
+    throw error;
   }
-}
+};
 
 //esta función ya recibe como parámetro un objeto para ser enviado por axios
 const createProduct = async (newProduct) => {
   try {
     //axios tiene métodos .get .post .put .delete para cada verbo http a usar
-    const result = await axios.post("https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos", newProduct );
+    const result = await axios.post(
+      "https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos",
+      newProduct
+    );
     // console.log(result);
-    if(result.status === 201) {
+    if (result.status === 201) {
       return result.data;
     } else {
       throw new Error("error al crear recurso");
     }
-
   } catch (error) {
     console.log(error);
     throw error;
   }
-}
+};
 
 const readProductById = async (id) => {
   try {
-    const result = await axios.get(`https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos/${id}`);
-    if(result.status === 200){
+    const result = await axios.get(
+      `https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos/${id}`
+    );
+    if (result.status === 200) {
       return result.data; //la info del producto
     } else {
       throw new Error(`error al solicitar producto con id: ${id}`);
@@ -46,18 +51,18 @@ const readProductById = async (id) => {
   } catch (error) {
     throw error;
   }
-}
+};
 
 const updateProduct = async (product) => {
-  console.log("update producto", product)
-  const result = await axios.put(`https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos/${product.id}`);
-  console.log(result);
-  return result.data;
-}
+  const result = await axios.put(
+    `https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos/${product.id}`,
+    product
+  );
+  if (result.status === 200) {
+    return result.data;
+  } else {
+    throw new Error("Error al actualizar");
+  }
+};
 
-export {
-  readProducts,
-  createProduct,
-  readProductById,
-  updateProduct
-}
+export { readProducts, createProduct, readProductById, updateProduct };
