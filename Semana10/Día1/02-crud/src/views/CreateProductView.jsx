@@ -26,18 +26,18 @@ const CreateProductView = () => {
       await createProduct(product);
       // alert("Producto Creado");
       await Swal.fire({
-        title:`${product.producto_nombre} creado exitosamente`,
+        title: `${product.producto_nombre} creado exitosamente`,
         text: "Operación realizada",
         icon: "success",
-        theme: "dark"
-      })
+        theme: "dark",
+      });
       // console.log("El usuario interactuo!!")
       //navigate puede recibir la ruta a la que deseamos ir
-      navigate('/');
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
-  }
+  };
   /**1.Obj: crear un nuevo registro
    * 2 de donde sacamos los datos -> form
    * 3. tengo los datos tengo que transformarlos -> JSON
@@ -48,7 +48,7 @@ const CreateProductView = () => {
     { name: "producto_nombre", label: "Nombre del producto", type: "text" },
     { name: "producto_descripcion", label: "Descripción", type: "text" },
     { name: "producto_precio", label: "Precio del producto", type: "number" },
-  ]
+  ];
 
   return (
     <div>
@@ -65,6 +65,19 @@ const CreateProductView = () => {
             handleInput={handleInput}
           />
         ))}
+        {/* input file */}
+        <div className="mb-3 p-2">
+          <label className="block mb-1" htmlFor="input-file">
+            Imagen del producto
+          </label>
+          <input
+            id="input-file"
+            type="file"
+            placeholder={`Seleccione imagen`}
+            // onChange={handleInput}
+            className="file-input w-full"
+          />
+        </div>
         <button type="submit" className="bg-green-600 text-white p-3 rounded">
           Guardar
         </button>
