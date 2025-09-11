@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { readProductById } from "../services/productService";
+import { readProductById, updateProduct } from "../services/productService";
 import Input from "../components/Input";
 
 const EditProductView = () => {
@@ -9,6 +9,7 @@ const EditProductView = () => {
     producto_precio: 0,
     producto_descripcion: "",
     producto_imagen: "",
+    //id
   }); //cuando se Hace el setProduct en useEffect estamos añadiendo el id
 
   const { id } = useParams(); //recordemos que esto viene de la url
@@ -20,6 +21,16 @@ const EditProductView = () => {
 
     setProduct({ ...product, [event.target.name]: event.target.value });
   };
+
+  const handleSubmit = async (event) => {
+    try {
+      event.preventDefault();
+      await updateProduct(product)
+      alert("actualizado!!!")
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   const inputsInfo = [
     { name: "producto_nombre", label: "Nombre del producto", type: "text" },
@@ -43,7 +54,7 @@ const EditProductView = () => {
   return (
     <div>
       <h1 className="text-2xl font-bold">Editar Producto</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         {inputsInfo.map((item, index) => (
           <Input
             key={index}
