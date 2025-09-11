@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { readProducts } from "../services/productService";
 import TableData from "../components/TableData";
-import { Pencil } from 'lucide-react';
+import { Pencil } from "lucide-react";
 
 const ProductsView = () => {
   //truthy y falsy
@@ -24,11 +24,11 @@ const ProductsView = () => {
   //creamos un arreglo de acciones (editar, eliminar)
   const actionsTable = [
     {
-      content: (
+      content: (info) => (
         <button
           className="btn btn-sm bg-yellow-500 text-white"
           onClick={() => {
-            console.log("Editar!!!!");
+            console.log("acción", info);
           }}
         >
           <Pencil />

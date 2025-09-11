@@ -36,7 +36,7 @@ const EditProductView = () => {
         icon:'success',
         theme:'dark'
       });
-      navigate('/')
+      navigate('/');
     } catch (error) {
       console.log(error)
     }
