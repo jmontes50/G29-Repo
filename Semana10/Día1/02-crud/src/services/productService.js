@@ -48,8 +48,16 @@ const readProductById = async (id) => {
   }
 }
 
+const updateProduct = async (product) => {
+  console.log("update producto", product)
+  const result = await axios.put(`https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos/${product.id}`);
+  console.log(result);
+  return result.data;
+}
+
 export {
   readProducts,
   createProduct,
-  readProductById
+  readProductById,
+  updateProduct
 }

@@ -9,7 +9,7 @@ const EditProductView = () => {
     producto_precio: 0,
     producto_descripcion: "",
     producto_imagen: "",
-  });
+  }); //cuando se Hace el setProduct en useEffect estamos añadiendo el id
 
   const { id } = useParams(); //recordemos que esto viene de la url
   //ej. /editar/5
