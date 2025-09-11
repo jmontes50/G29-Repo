@@ -10,6 +10,7 @@ const CreateProductView = () => {
     producto_descripcion: "",
     producto_precio: 0,
   });
+  const [fileImage, setFileImage] = useState(null);
 
   let navigate = useNavigate();
 
@@ -19,7 +20,12 @@ const CreateProductView = () => {
 
     setProduct({ ...product, [event.target.name]: event.target.value });
   };
-
+/**1.Obj: crear un nuevo registro
+   * 2 de donde sacamos los datos -> form
+   * 3. tengo los datos tengo que transformarlos -> JSON
+   * 4. Envio
+   * 5. tengo que mostrar un feedback
+   */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -38,12 +44,12 @@ const CreateProductView = () => {
       console.log(error);
     }
   };
-  /**1.Obj: crear un nuevo registro
-   * 2 de donde sacamos los datos -> form
-   * 3. tengo los datos tengo que transformarlos -> JSON
-   * 4. Envio
-   * 5. tengo que mostrar un feedback
-   */
+
+  const handleInputFile = (event) => {
+    // console.log(event.target.files[0])
+    setFileImage(event.target.files[0]);
+  }
+
   const inputsInfo = [
     { name: "producto_nombre", label: "Nombre del producto", type: "text" },
     { name: "producto_descripcion", label: "Descripción", type: "text" },
@@ -74,8 +80,9 @@ const CreateProductView = () => {
             id="input-file"
             type="file"
             placeholder={`Seleccione imagen`}
-            // onChange={handleInput}
+            onChange={handleInputFile}
             className="file-input w-full"
+            // multiple
           />
         </div>
         <button type="submit" className="bg-green-600 text-white p-3 rounded">
