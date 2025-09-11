@@ -1,34 +1,65 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { readProductById } from "../services/productService";
+import Input from "../components/Input";
 
 const EditProductView = () => {
   const [product, setProduct] = useState({
-    producto_nombre:"",
-    producto_precio:0,
-    producto_descripcion:"",
-    producto_imagen:"",
-  })
+    producto_nombre: "",
+    producto_precio: 0,
+    producto_descripcion: "",
+    producto_imagen: "",
+  });
 
   const { id } = useParams(); //recordemos que esto viene de la url
   //ej. /editar/5
-  console.log(id);
+  // console.log(id);
+  const handleInput = (event) => {
+    console.log("target", event.target);
+    console.log(event.target.value);
+
+    setProduct({ ...product, [event.target.name]: event.target.value });
+  };
+
+  const inputsInfo = [
+    { name: "producto_nombre", label: "Nombre del producto", type: "text" },
+    { name: "producto_descripcion", label: "Descripción", type: "text" },
+    { name: "producto_precio", label: "Precio del producto", type: "number" },
+  ];
 
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const data = await readProductById(id)
-        console.log(data);
+        const data = await readProductById(id);
+        // console.log(data);
+        setProduct(data);
       } catch (error) {
         console.log(error);
       }
-    }
+    };
     getProduct();
-  }, [])
+  }, []);
 
   return (
-    <div>EditProductView</div>
-  )
-}
+    <div>
+      <h1 className="text-2xl font-bold">Editar Producto</h1>
+      <form>
+        {inputsInfo.map((item, index) => (
+          <Input
+            key={index}
+            value={product}
+            name={item.name}
+            label={item.label}
+            type={item.type}
+            handleInput={handleInput}
+          />
+        ))}
+        <button type="submit" className="bg-green-600 text-white p-3 rounded">
+          Guardar
+        </button>
+      </form>
+    </div>
+  );
+};
 
-export default EditProductView
+export default EditProductView;
