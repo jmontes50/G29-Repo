@@ -35,7 +35,21 @@ const createProduct = async (newProduct) => {
   }
 }
 
+const readProductById = async (id) => {
+  try {
+    const result = await axios.get(`https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos/${id}`);
+    if(result.status === 200){
+      return result.data; //la info del producto
+    } else {
+      throw new Error(`error al solicitar producto con id: ${id}`);
+    }
+  } catch (error) {
+    throw error;
+  }
+}
+
 export {
   readProducts,
-  createProduct
+  createProduct,
+  readProductById
 }
