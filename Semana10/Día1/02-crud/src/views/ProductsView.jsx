@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { readProducts } from "../services/productService";
 import TableData from "../components/TableData";
 import { Pencil } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ProductsView = () => {
   //truthy y falsy
@@ -11,6 +12,7 @@ const ProductsView = () => {
    * 3. Cómo los obtengo???? -> axios/service
    * 4. Cómo los muestro??? -> transformandolo a algo que el navegador entienda
    */
+  const navigate = useNavigate();
 
   const headers = [
     //name será el nombre del campo desde la API
@@ -28,7 +30,8 @@ const ProductsView = () => {
         <button
           className="btn btn-sm bg-yellow-500 text-white"
           onClick={() => {
-            console.log("acción", info);
+            // console.log("acción", info);
+            navigate(`/editar/${info.id}`)
           }}
         >
           <Pencil />
