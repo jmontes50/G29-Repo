@@ -36,7 +36,7 @@ const ProductsView = () => {
         confirmButtonText: "Sí, eliminar"
       })
       if(result.isConfirmed){
-        console.log("eliminar")
+        await deleteProduct(id);
       }
     } catch (error) {
 
