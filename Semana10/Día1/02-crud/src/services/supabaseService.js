@@ -21,10 +21,11 @@ const uploadFile = async (newFile) => {
     }
     // console.log(data);
     //data tiene una propiedad path que es necesaria para b uscar y retornar la url pública
-    const filePublicUrl = supabase.storage
+    const responseUrl = supabase.storage
       .from(BUCKET_NAME)
       .getPublicUrl(data.path);
-    return filePublicUrl;
+    const url = responseUrl.data.publicUrl;
+    return url;
   } catch (error) {
     console.log(error);
   }

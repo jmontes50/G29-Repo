@@ -32,8 +32,11 @@ const CreateProductView = () => {
     //02 - ya con la URL recien creamos el producto en mockapi
     event.preventDefault();
     try {
-      const url = await uploadFile(fileImage);
-      return; //va a ser temporal
+      if(fileImage){ //si es que el usuario selecciono una imagen
+        const url = await uploadFile(fileImage); //subimos la imagen
+        product.producto_imagen = url; //y agregamos la url de la imagen como propiedad
+      } //incluso si es obligatorio podriamos continuar mandando un alert
+
       await createProduct(product);
       // alert("Producto Creado");
       await Swal.fire({
