@@ -5,7 +5,7 @@ import { createClient } from '@supabase/supabase-js'
 //encuentra la URL en Project Settings -> DATA Api -> url
 //la api key tiene que ser creada en Project Settings -> API KEYS -> api key
 const publicApiKey = import.meta.env.VITE_APIKEY_SUPABASE;
-console.log({ publicApiKey });
+// console.log({ publicApiKey });
 const supabase = createClient('https://kwpikywfqltyhrzlidyf.supabase.co', publicApiKey);
 
 export {
