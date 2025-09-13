@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { readProducts } from "../services/productService";
+import { readProducts, deleteProduct } from "../services/productService";
 import TableData from "../components/TableData";
-import { Pencil } from "lucide-react";
+import { Pencil, Trash } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ProductsView = () => {
   //truthy y falsy
@@ -23,6 +24,25 @@ const ProductsView = () => {
     // { name: "producto_imagen", label: "Imagen"}
   ];
 
+  const handleDelete = async (id) => {
+    try {
+      const result = await Swal.fire({
+        title:"Desea eliminar este producto?",
+        text: "Esta acción es irreversible",
+        icon: "warning",
+        theme: 'dark',
+        showCancelButton: true,
+        cancelButtonText: "No, cancelar",
+        confirmButtonText: "Sí, eliminar"
+      })
+      if(result.isConfirmed){
+        console.log("eliminar")
+      }
+    } catch (error) {
+
+    }
+  }
+
   //creamos un arreglo de acciones (editar, eliminar)
   const actionsTable = [
     {
@@ -38,6 +58,18 @@ const ProductsView = () => {
         </button>
       ),
     },
+    {
+      content: (info) => (
+        <button
+          className="btn btn-sm bg-red-500 text-white"
+          onClick={() => {
+            handleDelete(info.id)
+          }}
+        >
+          <Trash />
+        </button>
+      )
+    }
   ];
 
   useEffect(() => {
