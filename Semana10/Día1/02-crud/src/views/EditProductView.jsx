@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { readProductById, updateProduct } from "../services/productService";
 import Input from "../components/Input";
 import Swal from "sweetalert2";
+import { uploadFile } from "../services/supabaseService";
 
 const EditProductView = () => {
   const [product, setProduct] = useState({
@@ -12,6 +13,7 @@ const EditProductView = () => {
     producto_imagen: "",
     //id
   }); //cuando se Hace el setProduct en useEffect estamos añadiendo el id
+  const [fileImage, setFileImage] = useState(null);
 
   const { id } = useParams(); //recordemos que esto viene de la url
   //ej. /editar/5
@@ -25,9 +27,18 @@ const EditProductView = () => {
     setProduct({ ...product, [event.target.name]: event.target.value });
   };
 
+  const handleInputFile = (event) => {
+    // console.log(event.target.files[0])
+    setFileImage(event.target.files[0]);
+  }
+
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
+      if(fileImage){
+         const url = await uploadFile(fileImage);
+         product.producto_imagen = url
+      }
       await updateProduct(product)
       // alert("actualizado!!!")
       await Swal.fire({
@@ -75,6 +86,21 @@ const EditProductView = () => {
             handleInput={handleInput}
           />
         ))}
+        {/* input file */}
+        <div className="mb-3 p-2">
+          <label className="block mb-1" htmlFor="input-file">
+            Imagen del producto
+          </label>
+          <input
+            id="input-file"
+            type="file"
+            placeholder={`Seleccione imagen`}
+            onChange={handleInputFile}
+            className="file-input w-full"
+            // multiple
+          />
+        </div>
+        {/* imagen actual */}
         <label className="block mb-1 ml-2">Imagen actual</label>
         <div className="border-2 rounded-md overflow-hidden max-w-52 m-2">
           <img src={product.producto_imagen} alt={product.producto_nombre} />
