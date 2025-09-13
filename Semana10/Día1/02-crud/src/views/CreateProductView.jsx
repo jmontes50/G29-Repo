@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import { createProduct } from "../services/productService";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { uploadFile } from "../services/supabaseService";
 
 const CreateProductView = () => {
   const [product, setProduct] = useState({
@@ -27,8 +28,12 @@ const CreateProductView = () => {
    * 5. tengo que mostrar un feedback
    */
   const handleSubmit = async (event) => {
+    //01 - subir la imagen ---> de que nos de una URL
+    //02 - ya con la URL recien creamos el producto en mockapi
     event.preventDefault();
     try {
+      const url = await uploadFile(fileImage);
+      return; //va a ser temporal
       await createProduct(product);
       // alert("Producto Creado");
       await Swal.fire({
