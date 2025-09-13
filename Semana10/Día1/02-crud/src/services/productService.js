@@ -65,4 +65,9 @@ const updateProduct = async (product) => {
   }
 };
 
-export { readProducts, createProduct, readProductById, updateProduct };
+const deleteProduct = async (id) => {
+  await axios.delete(`https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos/${id}`)
+  return true;
+}
+
+export { readProducts, createProduct, readProductById, updateProduct, deleteProduct };
