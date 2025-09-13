@@ -37,6 +37,14 @@ const ProductsView = () => {
       })
       if(result.isConfirmed){
         await deleteProduct(id);
+        //tenemos que remover el producto de la interfaz
+        const filteredProducts = products.filter((prod) => prod.id !== id);
+        setProducts(filteredProducts);
+        Swal.fire({
+          title:"Producto eliminado",
+          icon:"success",
+          theme:'dark'
+        })
       }
     } catch (error) {
 
