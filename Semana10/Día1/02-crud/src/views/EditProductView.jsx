@@ -75,6 +75,10 @@ const EditProductView = () => {
             handleInput={handleInput}
           />
         ))}
+        <label className="block mb-1 ml-2">Imagen actual</label>
+        <div className="border-2 rounded-md overflow-hidden max-w-52 m-2">
+          <img src={product.producto_imagen} alt={product.producto_nombre} />
+        </div>
         <button type="submit" className="bg-green-600 text-white p-3 rounded">
           Guardar
         </button>
