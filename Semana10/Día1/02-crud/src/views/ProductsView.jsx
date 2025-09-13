@@ -47,7 +47,7 @@ const ProductsView = () => {
         })
       }
     } catch (error) {
-
+      console.log(error) //podría ser otro Swal
     }
   }
 
