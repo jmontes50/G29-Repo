@@ -11,6 +11,12 @@ const useContadorStore = create((set) => ({
   reducir: () => {
     set((state) => ({ numero: state.numero - 1 }));
   },
+  cambiarTexto: () => {
+    set({ texto: "Pingüino"})
+  },
+  concatenarTexto: () => {
+    set((state) => ({ texto: state.texto + " Tortuga"}))
+  }
 }));
 
 export default useContadorStore;
