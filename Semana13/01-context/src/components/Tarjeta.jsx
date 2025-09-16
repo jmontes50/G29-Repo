@@ -1,12 +1,17 @@
 import { useContext } from "react";
-// import { Conta}
+import { ContadorContext } from "../context/ContextContador";
 
-const Tarjeta = (props) => {
+const Tarjeta = () => {
+  const { contador } = useContext(ContadorContext);
+  console.log(contador)
+
+
   return (
     <div>
       <h2>
         Contador es:
-        {props.contador}
+        {/* {props.contador} */}
+        {contador}
       </h2>
       {/* <Boton contador={props.contador} /> */}
     </div>
