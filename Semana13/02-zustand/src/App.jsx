@@ -1,6 +1,11 @@
+import Observador from "./Observador"
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Observador />
+
+    </div>
   )
 }
 
