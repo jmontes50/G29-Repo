@@ -1,11 +1,13 @@
 import useContadorStore from "./store/contadorStore"
 
 const Observador = () => {
-  const obj = useContadorStore();
-  console.log(obj)
+  const { numero, texto } = useContadorStore();
 
   return (
-    <div>Observador</div>
+    <div>
+      <h2>{ texto }</h2>
+      <h4>Contador es: { numero }</h4>
+    </div>
   )
 }
 
