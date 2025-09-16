@@ -9,10 +9,18 @@ const useContadorStore = create(
       texto: "Oso",
       //actions
       incrementar: () => {
-        set((state) => ({ numero: state.numero + 1 }));
+        set(
+          (state) => ({ numero: state.numero + 1 }),
+          false, //si le ponemos true me reemplaza todo el state
+          "contador/incrementar"
+        );
       },
       reducir: () => {
-        set((state) => ({ numero: state.numero - 1 }));
+        set(
+          (state) => ({ numero: state.numero - 1 }),
+          false,
+          "contador/reducir"
+        );
       },
       cambiarTexto: () => {
         set({ texto: "Pingüino"})
