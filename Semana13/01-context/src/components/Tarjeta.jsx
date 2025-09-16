@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ContadorContext } from "../context/ContextContador";
 
 const Tarjeta = () => {
-  const { contador } = useContext(ContadorContext);
+  const { contador, setContador } = useContext(ContadorContext);
   console.log(contador)
 
 
@@ -13,6 +13,9 @@ const Tarjeta = () => {
         {/* {props.contador} */}
         {contador}
       </h2>
+      <button onClick={() => setContador(contador + 10)}>
+        Aumentar
+      </button>
       {/* <Boton contador={props.contador} /> */}
     </div>
   )
