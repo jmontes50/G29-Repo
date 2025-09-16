@@ -1,7 +1,7 @@
 import { useState, createContext } from "react"
 
 const ContadorContext = createContext();
-//Un context va a tener 2 cosas un provider y un consumer
+//Un context va a tener 2 cosas un provider y un consumer (consumer ya no se utiliza)
 
 
 const ContextContadorProvider = (props) => {
