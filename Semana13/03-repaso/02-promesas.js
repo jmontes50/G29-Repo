@@ -6,7 +6,7 @@ const reuna = () => {
   return new Promise((resolve, reject) => {
     //va la parte asíncrona
     setTimeout(() => {
-      let error = true;
+      let error = false;
       if (error) {
         reject("✖️ No se puede");
       } else {
@@ -16,9 +16,26 @@ const reuna = () => {
   });
 };
 
+const comprarPizza = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let error = false;
+      if(error){
+        reject("No hay pizza, Comamos salchipapa!");
+      }else{
+        resolve("La pizza esta lista!");
+      }
+    }, 3000)
+  })
+}
+
 reuna()
-.then((rpta) => {
+.then((rpta) => { //este captura el resolve de reuna
   console.log(rpta);
+  return comprarPizza()
+})
+.then((rpta2) => { //este sale solo si la 1ra promesa se cumplió
+  console.log(rpta2)
 })
 .catch((err) => {
   console.log(err)
