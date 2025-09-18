@@ -29,6 +29,19 @@ const comprarPizza = () => {
   })
 }
 
+const conseguirJuegosMesa = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let error = true;
+      if(error){
+        reject("No hay juegos");
+      }else{
+        resolve("Consegui los gatitos explosivos!");
+      }
+    }, 3000)
+  })
+}
+
 reuna()
 .then((rpta) => { //este captura el resolve de reuna
   console.log(rpta);
@@ -36,8 +49,12 @@ reuna()
 })
 .then((rpta2) => { //este sale solo si la 1ra promesa se cumplió
   console.log(rpta2)
+  return conseguirJuegosMesa()
 })
-.catch((err) => {
+.then((rpta3) => {
+  console.log(rpta3)
+})
+.catch((err) => { //este catch funciona para todas las demas promesas encadenadas más arriba
   console.log(err)
 })
 
