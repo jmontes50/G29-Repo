@@ -32,7 +32,7 @@ const comprarPizza = () => {
 const conseguirJuegosMesa = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      let error = true;
+      let error = false;
       if(error){
         reject("No hay juegos");
       }else{
@@ -56,6 +56,9 @@ reuna()
 })
 .catch((err) => { //este catch funciona para todas las demas promesas encadenadas más arriba
   console.log(err)
+})
+.finally(() => { //siempre se ejecuta, pero al final
+  console.log("yo estoy al final");
 })
 
 
