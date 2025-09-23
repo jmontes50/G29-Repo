@@ -1,3 +1,10 @@
+//fetch o axios, son maneras de hacer Peticiones(requests)
+//Y las peticiones es una manera que se comunican aplicaciones entre ellas, sobretodo por redes (LAN, Internet)
+//suelen requerir la URL de la API que hara llegar nuestra petición
+// y a veces especificamente en la URL un id
+//y a veces en el body un JSON con lo que se desee enviar
+//tanto fetch y axios usan promesas, ya que estamos hablando de hacer una comunicación con algo que probablamente este en un distancia lejana o una operación que demore en el backend
+
 fetch("https://68afa145b91dfcdd62bcb6b1.mockapi.io/productos", {
   method: "GET",
 })
