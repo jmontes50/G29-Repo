@@ -105,9 +105,9 @@ npm run dev
 - **Funcionalidad CRUD:** debe crear, listar, editar y eliminar correctamente en MockAPI.  
 - **Código y arquitectura:** componentes claros y separados, código entendible.  
 - **Estado y efectos:** uso adecuado de `useState` y `useEffect`.  
-- **Formularios y validaciones:** formularios controlados con validaciones básicas.  
+- **Formularios y validaciones:** formularios controlados con validaciones básicas. (atributos de form, required, min, max) 
 - **UX mínima:** botones y mensajes claros, confirmación al eliminar, estados de carga/error.  
-- **Mantenibilidad:** README útil, estructura organizada, `.env.example` si aplica.
+- **Mantenibilidad:** README útil, estructura organizada, `.env.example` si aplica. (Opcional)
 
 ---
 
