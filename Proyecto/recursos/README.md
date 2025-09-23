@@ -82,20 +82,20 @@ Para cualquier entidad, considera estos campos básicos:
 ### Hito 1: Fundación
 - [ ] **Leer (READ)**: Mostrar lista de elementos
 - [ ] Conectar con MockAPI
-- [ ] Diseño básico de tarjetas/tabla
+- [ ] Diseño básico de tarjetas/tabla (Uds. definen el diseño)
 - [ ] Navegación simple
 
 ### Hito 2: Interacción Básica
 - [ ] **Crear (CREATE)**: Formulario para añadir elementos
-- [ ] Validación básica de campos
-- [ ] Feedback visual (éxito/error)
+- [ ] Validación básica de campos (Opcional)
+- [ ] Feedback visual (éxito/error) (Ej. SweetAlert)
 
 ### Hito 3: Gestión Completa
 - [ ] **Actualizar (UPDATE)**: Editar elementos existentes
 - [ ] **Eliminar (DELETE)**: Borrar elementos
-- [ ] Confirmaciones de acciones destructivas
+- [ ] Confirmaciones de acciones destructivas (Sweet Alert)
 
-### Hito 4: Mejoras
+### Hito 4: Mejoras (Opcional)
 - [ ] Búsqueda y filtros
 - [ ] Paginación
 - [ ] Ordenamiento
