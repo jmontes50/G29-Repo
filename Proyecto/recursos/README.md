@@ -101,7 +101,7 @@ Para cualquier entidad, considera estos campos básicos:
 - [ ] Ordenamiento
 - [ ] Mejoras visuales
 
-## 🎨 Consideraciones de Prototipo
+## 🎨 Recomendaciones de Prototipo
 
 ### UI/UX Mínima
 1. **Layout simple**: Header, contenido principal, footer
@@ -146,8 +146,8 @@ DELETE https://tu-proyecto.mockapi.io/api/v1/productos/1
 Tu MVP estará listo cuando:
 - [ ] Puedas ver todos los elementos (READ)
 - [ ] Puedas agregar un nuevo elemento (CREATE)
-- [ ] Puedas editar un elemento existente (UPDATE)
-- [ ] Puedas eliminar un elemento (DELETE)
+- [ ] Puedas editar un elemento existente (UPDATE) - opcional
+- [ ] Puedas eliminar un elemento (DELETE) - opcional
 - [ ] La interfaz sea usable (aunque simple)
 - [ ] No tenga errores críticos
 
